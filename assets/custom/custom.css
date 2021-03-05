@@ -16,7 +16,12 @@ a.text-black.active {
   color: #ef7474 !important;
 }
 
-
+@media (prefers-color-scheme: light) {
+  .text-primary {
+    color: #000000 !important;
+  }
+  
+}
 
 /* Dark Theme */
 @media (prefers-color-scheme: dark) {
