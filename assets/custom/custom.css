@@ -30,8 +30,8 @@ display: block;
 
 .btn-primary,
 .btn-primary:active {
-background-color: #000000 !important;
-border-color: #6592e6 !important;
+background-color: #ef7474 !important;
+border-color: #ef7474 !important;
 color: #ffffff !important;
 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
