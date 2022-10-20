@@ -176,3 +176,13 @@ a.text-black.active {
         height: 5.5rem;
     }
 }
+
+/* Red Alert Box */
+.alert {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    text-align: start;
+  }
