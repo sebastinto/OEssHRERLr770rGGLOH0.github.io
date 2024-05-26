@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Jost';
+    /*noinspection CssUnknownTarget*/
+    src: url('/fonts/jost/jost_variable.ttf')
+}
+
+@font-face {
+    font-family: 'RedditMono';
+    /*noinspection CssUnknownTarget*/
+    src: url('/fonts/redditmono/reddit_mono_variable.ttf')
+}
+
+@font-face {
+    font-family: 'Rubik';
+    /*noinspection CssUnknownTarget*/
+    src: url('/fonts/rubik/rubik_variable.ttf')
+}
