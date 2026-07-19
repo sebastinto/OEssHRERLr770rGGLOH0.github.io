@@ -1,0 +1,196 @@
+/* tobianoapps.com — static site styles. Hand-written; no framework. */
+
+/* ---- Theme tokens (light default, .dark overrides on <html>) ---- */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --border: #e6e6e6;
+  --accent: #df3030;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --switch-bg: #ffffff;
+  --switch-hover: #fbe0e0;
+  --muted: rgba(0, 0, 0, 0.6);
+}
+html.dark {
+  --bg: #191919;
+  --text: #dddddd;
+  --border: #323232;
+  --accent: #ef6c6c;
+  --header-bg: rgba(25, 25, 25, 0.85);
+  --switch-bg: #323232;
+  --switch-hover: #5f2b2b;
+  --muted: rgba(221, 221, 221, 0.6);
+}
+
+/* ---- Base ---- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Jost, Ubuntu, Roboto, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code {
+  font-family: RedditMono, "Ubuntu Mono", "Roboto Mono", "Courier New", monospace;
+}
+img { max-width: 100%; }
+
+/* ---- Header ---- */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: var(--header-bg);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; cursor: pointer; color: var(--text); }
+.brand:hover { text-decoration: none; }
+.brand img { width: 36px; height: 36px; object-fit: scale-down; }
+.brand span { margin-left: 8px; font-size: 1.4rem; font-weight: bold; }
+.header-spacer { flex: 1; }
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  min-width: 40px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  color: var(--text);
+  background: var(--switch-bg);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 200ms ease, rotate 500ms ease;
+}
+.theme-switch:hover { background: var(--switch-hover); rotate: 360deg; }
+.theme-switch .fa-moon { display: none; }
+html.dark .theme-switch .fa-sun { display: none; }
+html.dark .theme-switch .fa-moon { display: inline; }
+
+/* ---- Page shell ---- */
+.page { padding-top: 72px; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 clamp(1.5rem, 8vw, 96px); }
+
+/* ---- Project sections (landing) ---- */
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 48px);
+  padding: 3rem 0;
+}
+.project-text { flex: 0 1 340px; min-width: 0; }
+.project-image { flex: 1 1 480px; min-width: 0; text-align: center; }
+.project-image img {
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.project h2 { font-size: 2.9rem; font-weight: bold; margin: 0 0 0.5rem; }
+.project .subtitle { font-size: 1.1rem; margin: 0.15rem 0; }
+.project .features { margin: 1rem 0; }
+.project .features a { display: block; font-size: 1.05rem; margin: 0.35rem 0; }
+.badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+.badges a { display: inline-block; transition: transform 200ms ease; }
+.badges a:hover { transform: scale(1.05); }
+.badges img { width: 160px; height: 55px; object-fit: contain; }
+
+/* ---- Footer ---- */
+.site-footer {
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+.socials a {
+  color: var(--text);
+  transition: transform 200ms ease;
+  display: inline-block;
+}
+.socials a:hover { transform: rotate(10deg) scale(1.4); }
+.copyright { font-size: 0.9rem; }
+
+/* ---- FAQ (native details/summary accordion) ---- */
+.faq-title {
+  width: 100%;
+  font-size: 2.9rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin: 0;
+}
+.faq { max-width: 820px; margin: 0 auto 3rem; padding: 0 1rem; }
+.faq details {
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px;
+  background: #323232;
+  color: #ffffff;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .chevron { transition: transform 300ms ease; }
+.faq details[open] summary .chevron { transform: rotate(180deg); }
+.faq .answer {
+  background: #191919;
+  color: #dddddd;
+  padding: 18px;
+  line-height: 1.6;
+}
+.faq .answer a { color: var(--accent); }
+.faq .answer ol { margin: 0.5rem 0; padding-left: 1.5rem; }
+.faq .answer p { margin: 0.5rem 0; }
+
+/* ---- Legal / doc pages ---- */
+.doc {
+  width: 85%;
+  max-width: 900px;
+  margin: 3rem auto;
+  font-family: Rubik, Jost, Arial, sans-serif;
+  line-height: 2;
+  font-size: 1rem;
+}
+.doc h2 { font-size: 2rem; font-weight: bold; }
+.doc h3 { font-size: 1.3rem; font-weight: bold; margin-top: 2rem; }
+.doc a { color: var(--accent); }
+.doc ul { padding-left: 1.4rem; }
+.doc li { margin: 0.25rem 0; }
+@media (min-width: 900px) {
+  .doc { width: 70%; }
+}
+
+@media (max-width: 720px) {
+  .project { padding: 2rem 0.5rem; }
+  .project h2 { font-size: 2.2rem; }
+}
