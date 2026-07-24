@@ -46,7 +46,6 @@ HEADER = """<header class="site-header">
 FOOTER = """<footer class="site-footer">
   <div class="socials">
     <a href="https://github.com/sebastinto" aria-label="GitHub" target="_blank" rel="noopener"><span class="fa-brands fa-github"></span></a>
-    <a href="https://www.linkedin.com/in/sebastienvictorpinto/" aria-label="LinkedIn" target="_blank" rel="noopener"><span class="fa-brands fa-linkedin"></span></a>
     <a href="mailto:contact@tobianoapps.com" aria-label="Email"><span class="fa-regular fa-envelope"></span></a>
   </div>
   <div class="copyright">&copy; 2026, Tobiano apps</div>
