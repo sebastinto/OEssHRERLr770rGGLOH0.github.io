@@ -7,7 +7,7 @@ description: Privacy Policy for The Depths app
 
 [Tobiano Apps](https://www.tobianoapps.com/) built The Depths app for Android — an underwater live wallpaper. The app is free to download and customize, with an optional one-time in-app purchase that unlocks setting it as your live wallpaper. This Service is provided by [Tobiano Apps](https://www.tobianoapps.com/) and is intended for use as is.
 
-The Depths is built to be privacy-first, and it goes further than most: **the app requests no Android permissions at all, and does not include the internet permission.** It therefore cannot send anything anywhere. There is no location access, no ads, no advertising identifiers, no behavioral analytics, and no crash reporting. The wallpaper is drawn entirely on your device, and your settings are stored on your device.
+The Depths is built to be privacy-first. It does not access your location, requests no runtime permissions, shows no ads, and includes no advertising identifiers, no behavioral analytics, and no crash reporting. The wallpaper is drawn entirely on your device, and your settings are stored on your device. The only permissions the app declares are the ones Google Play Billing requires — billing, internet, and network state — and they are used solely to check and process the optional purchase described below. The wallpaper itself never transmits anything.
 
 This page is used to inform visitors regarding policies with the collection, use, and disclosure of Personal Information if anyone decided to use this app. If you choose to use this Service, then you agree to the collection and use of information in relation to this policy. We will not use or share your information with anyone except as described in this Privacy Policy.
 
@@ -43,7 +43,7 @@ We do not employ third-party companies or individuals to process data on our beh
 
 ### **Security**
 
-We value your trust, so the app is designed so that there is nothing to lose: it holds no account, transmits nothing, and stores your settings only on your own device. Remember that no method of transmission over the internet, or method of electronic storage, is 100% secure and reliable, and we cannot guarantee absolute security.
+We value your trust, so the app is designed so that there is nothing to lose: it holds no account, stores your settings only on your own device, and transmits nothing except the purchase check handled by Google Play. Remember that no method of transmission over the internet, or method of electronic storage, is 100% secure and reliable, and we cannot guarantee absolute security.
 
 ### **Links to Other Sites**
 
