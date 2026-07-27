@@ -5,9 +5,9 @@ description: Privacy Policy for the Dotscape app
 
 ## **Privacy Policy**
 
-[Tobiano Apps](https://www.tobianoapps.com/) built the Dotscape app for Android — a live wallpaper. The app is free to use, with an optional paid subscription (Dotscape Pro) that unlocks additional features. This Service is provided by [Tobiano Apps](https://www.tobianoapps.com/) and is intended for use as is.
+[Tobiano Apps](https://www.tobianoapps.com/) built the Dotscape app for Android — a live wallpaper. The app is free to use, with an optional one-time purchase (Dotscape Pro) that unlocks setting your design as a live wallpaper. This Service is provided by [Tobiano Apps](https://www.tobianoapps.com/) and is intended for use as is.
 
-Dotscape is built to be privacy-first. It does not access your location, requests no runtime permissions, shows no ads, and includes no advertising identifiers or behavioral analytics. The wallpaper runs entirely on your device, and your settings are stored on your device. The only time the app uses the internet is for anonymous crash monitoring and to process optional subscriptions — both described below.
+Dotscape is built to be privacy-first. It does not access your location, requests no runtime permissions, shows no ads, and includes no advertising identifiers or behavioral analytics. The wallpaper runs entirely on your device, and your settings are stored on your device. The only time the app uses the internet is for anonymous crash monitoring and to process the optional purchase — both described below.
 
 This page is used to inform visitors regarding policies with the collection, use, and disclosure of Personal Information if anyone decided to use this app. If you choose to use this Service, then you agree to the collection and use of information in relation to this policy. We will not use or share your information with anyone except as described in this Privacy Policy.
 
@@ -15,19 +15,18 @@ This page is used to inform visitors regarding policies with the collection, use
 
 The app does not collect personally identifiable information. Any settings or preferences you configure are retained on your device and are not collected by us in any way.
 
-Dotscape uses a small number of third-party services for crash monitoring and to process optional subscriptions. Links to the privacy policies of these providers:
+Dotscape uses a small number of third-party services for crash monitoring and to process the optional purchase. Links to the privacy policies of these providers:
 
 *   [Google Play Services](https://www.google.com/policies/privacy/)
-*   [RevenueCat](https://www.revenuecat.com/privacy)
 *   [Sentry](https://sentry.io/privacy/)
 
 ### **Crash & Stability Monitoring**
 
 To keep the app reliable, Dotscape uses [Sentry](https://sentry.io/) for anonymous crash and stability monitoring. When the app hits an error or crash, Sentry receives diagnostic information — such as the error, the app version, and device and operating-system details — so we can find and fix problems. This is the only monitoring in the app: there is no advertising, no behavioral analytics, and no tracking of you across other apps or websites, and the data is not used to identify you personally.
 
-### **Subscriptions and Purchases**
+### **Purchases**
 
-Dotscape Pro subscriptions are sold and processed by Google through the Google Play Store. We do not receive or store your payment information. To manage your subscription and entitlements across devices, we use [RevenueCat](https://www.revenuecat.com/), which receives a pseudonymous, app-generated identifier and your subscription status. We do not use this information to identify you personally.
+Dotscape Pro is a one-time in-app purchase, sold and processed by Google through the Google Play Store. We do not receive or store your payment information. Your purchase is tied to your Google account and can be restored from within the app; we do not collect or store your purchase information on our own servers.
 
 ### **Log Data**
 
