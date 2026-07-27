@@ -266,6 +266,8 @@ LEGAL = [
     ("src/legal/android/timerise/Privacy.md",  "android/timerise/legal/privacy.html"),
     ("src/legal/android/timerise/Terms.md",    "android/timerise/legal/terms.html"),
     ("src/legal/android/dotscape/Privacy.md",  "android/dotscape/legal/privacy.html"),
+    ("src/legal/android/thedepths/Privacy.md", "android/thedepths/legal/privacy.html"),
+    ("src/legal/android/thedepths/Terms.md",   "android/thedepths/legal/terms.html"),
     ("src/legal/ios/sunnyside/Privacy.md",     "ios/sunnyside/legal/privacy.html"),
     ("src/legal/ios/sunnyside/Terms.md",       "ios/sunnyside/legal/terms.html"),
 ]
