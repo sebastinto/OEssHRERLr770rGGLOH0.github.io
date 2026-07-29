@@ -91,7 +91,10 @@ def build_index():
         [("&#9733; 19 Best Weather Apps &#9733;", "https://androidappsforme.com/weather-apps-for-android/"),
          ("&#9733; Featured on Android Police &#9733;", "https://www.androidpolice.com/2021/07/03/14-new-and-notable-android-apps-from-the-last-two-weeks-including-stadia-for-android-tv-elabels-and-zoom-for-chrome-6-19-21-7-3-21/#sunny-side")],
         "sunnyside_hero.webp",
-        [(GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.sunnyside&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")])
+        [("https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1785283200",
+          "https://apps.apple.com/us/app/sunny-side-uv-index/id6783180537?itscg=30200&itsct=apps_box_badge&mttnsubad=6783180537",
+          "Download on the App Store"),
+         (GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.sunnyside&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")])
     timerise = project(
         "Time Rise",
         ["Minimal Digital Hourglass"],
