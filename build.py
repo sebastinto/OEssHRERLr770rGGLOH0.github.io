@@ -102,9 +102,7 @@ def build_index():
         ["3D dot-particle live wallpaper", "Deeply customizable, tap to ripple"],
         [],
         "dotscape_hero.png",
-        # Coming soon while the Play listing is in review. Once live, swap to:
-        # (GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.dotscape&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")
-        [("coming_soon_badge.png", "", "Coming soon to Google Play")])
+        [(GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.dotscape&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")])
     timerise = project(
         "Time Rise",
         ["Minimal Digital Hourglass"],
