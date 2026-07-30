@@ -102,7 +102,7 @@ def build_index():
         "Dotscape",
         ["3D dot-particle live wallpaper", "Deeply customizable, tap to ripple"],
         [],
-        "dotscape_hero.png",
+        "dotscape_hero.webp",
         [(GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.dotscape&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")])
     depths = project(
         "The Depths",
