@@ -28,6 +28,12 @@ Links to the privacy policies of the third-party services used by the app:
 *   [Google Play Services](https://www.google.com/policies/privacy/)
 *   [Sentry](https://sentry.io/privacy/)
 
+### **Settings Backup**
+
+Your wallpaper settings and any presets you save are stored on your device. If you have Android's own backup turned on, the operating system also copies them to your personal Google account so they can be restored when you reinstall the app or set up a new phone. This is handled entirely by Android and Google — the data goes to your own account, not to us, and we cannot read it. You can turn it off in your device's system settings under Backup.
+
+Your record of having purchased the unlock is deliberately excluded from this backup. Ownership is always re-checked with Google Play instead of being restored from a backup file.
+
 ### **Crash & Stability Monitoring**
 
 To keep the wallpaper working on the very wide range of Android hardware it has to run on, The Depths uses [Sentry](https://sentry.io/) for anonymous crash and stability monitoring. If the app hits an error — most importantly if the graphics shader fails to run on a particular device's GPU, which would otherwise leave you with a blank wallpaper and no way for us to know — Sentry receives diagnostic information such as the error, the app version, and device and operating-system details, so we can find and fix it.
