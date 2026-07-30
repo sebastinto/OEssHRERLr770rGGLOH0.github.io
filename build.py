@@ -71,9 +71,11 @@ def project(title, subtitles, features, img, badges):
     feats = "".join(
         f'<a href="{esc_attr(u)}" target="_blank" rel="noopener">{t}</a>' for t, u in features)
     feats_html = f'<div class="features">{feats}</div>' if features else ""
-    bs = "".join(
-        f'<a href="{esc_attr(u)}" target="_blank" rel="noopener"><img src="{esc_attr(src)}" alt="{alt}"></a>'
-        for src, u, alt in badges)
+    def badge(src, u, alt):
+        img = f'<img src="{esc_attr(src)}" alt="{alt}">'
+        # A badge with no URL (e.g. "coming soon") renders as a plain image, not a dead link.
+        return f'<a href="{esc_attr(u)}" target="_blank" rel="noopener">{img}</a>' if u else img
+    bs = "".join(badge(src, u, alt) for src, u, alt in badges)
     return f"""<section class="project">
   <div class="project-text">
     <h2>{title}</h2>
@@ -95,6 +97,14 @@ def build_index():
           "https://apps.apple.com/us/app/sunny-side-uv-index/id6783180537?itscg=30200&itsct=apps_box_badge&mttnsubad=6783180537",
           "Download on the App Store"),
          (GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.sunnyside&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")])
+    dotscape = project(
+        "Dotscape",
+        ["3D dot-particle live wallpaper", "Deeply customizable, tap to ripple"],
+        [],
+        "dotscape_hero.png",
+        # Coming soon while the Play listing is in review. Once live, swap to:
+        # (GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.dotscape&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")
+        [("coming_soon_badge.png", "", "Coming soon to Google Play")])
     timerise = project(
         "Time Rise",
         ["Minimal Digital Hourglass"],
@@ -110,7 +120,7 @@ def build_index():
         "lake_coast_teaser.jpg",
         [(APP_STORE_IMG, "https://apps.apple.com/us/app/lake-and-coast/id1559404216?itsct=apps_box_badge&itscg=30200", "Download on the App Store"),
          (GP, "https://play.google.com/store/apps/details?id=org.scienceforourcoast.lakeandcoastnew", "Get it on Google Play")])
-    main = '<div class="container">\n' + sunny + timerise + lake + "\n</div>"
+    main = '<div class="container">\n' + sunny + dotscape + timerise + lake + "\n</div>"
     write("index.html", page("Tobiano Apps", "Home of Tobiano Apps.", main))
 
 # ---------------------------------------------------------------- FAQ page
