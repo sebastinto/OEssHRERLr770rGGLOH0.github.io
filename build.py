@@ -108,7 +108,7 @@ def build_index():
         "The Depths",
         ["Underwater live wallpaper", "Light shafts, caustics and drifting marine snow"],
         [],
-        "thedepths_hero.webp",
+        "thedepths_hero.png",
         # No URL: the store page is not public yet, so the badge is deliberately not a link.
         [(COMING_SOON, "", "Coming soon on Google Play")])
     timerise = project(
