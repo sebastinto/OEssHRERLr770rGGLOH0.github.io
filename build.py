@@ -66,11 +66,13 @@ def write(rel, content):
 GP = "google_play_badge.png"
 APP_STORE_IMG = "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&releaseDate=1276560000&h=fbdb5b4ea9418f75555a911d01d7610e"
 
-def project(title, subtitles, features, img, badges):
+def project(title, subtitles, features, img, badges, note=None):
     subs = "".join(f'<p class="subtitle">{s}</p>' for s in subtitles)
     feats = "".join(
         f'<a href="{esc_attr(u)}" target="_blank" rel="noopener">{t}</a>' for t, u in features)
     feats_html = f'<div class="features">{feats}</div>' if features else ""
+    # An optional status note (e.g. "no longer maintained") rendered muted, above the badges.
+    note_html = f'<p class="status">{note}</p>' if note else ""
     def badge(src, u, alt):
         img = f'<img src="{esc_attr(src)}" alt="{alt}">'
         # A badge with no URL (e.g. "coming soon") renders as a plain image, not a dead link.
@@ -81,6 +83,7 @@ def project(title, subtitles, features, img, badges):
     <h2>{title}</h2>
     {subs}
     {feats_html}
+    {note_html}
     <div class="badges">{bs}</div>
   </div>
   <div class="project-image"><img src="{img}" alt="{title}"></div>
@@ -123,7 +126,8 @@ def build_index():
         [],
         "lake_coast_teaser.jpg",
         [(APP_STORE_IMG, "https://apps.apple.com/us/app/lake-and-coast/id1559404216?itsct=apps_box_badge&itscg=30200", "Download on the App Store"),
-         (GP, "https://play.google.com/store/apps/details?id=org.scienceforourcoast.lakeandcoastnew", "Get it on Google Play")])
+         (GP, "https://play.google.com/store/apps/details?id=org.scienceforourcoast.lakeandcoastnew", "Get it on Google Play")],
+        note="Maintained by Pontchartrain Conservancy")
     main = '<div class="container">\n' + sunny + dotscape + depths + timerise + lake + "\n</div>"
     write("index.html", page("Tobiano Apps", "Home of Tobiano Apps.", main))
 
