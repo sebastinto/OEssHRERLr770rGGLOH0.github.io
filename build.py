@@ -127,7 +127,7 @@ def build_index():
         "lake_coast_teaser.jpg",
         [(APP_STORE_IMG, "https://apps.apple.com/us/app/lake-and-coast/id1559404216?itsct=apps_box_badge&itscg=30200", "Download on the App Store"),
          (GP, "https://play.google.com/store/apps/details?id=org.scienceforourcoast.lakeandcoastnew", "Get it on Google Play")],
-        note="Maintained by Pontchartrain Conservancy")
+        note="(Maintained by Pontchartrain Conservancy)")
     main = '<div class="container">\n' + sunny + dotscape + depths + timerise + lake + "\n</div>"
     write("index.html", page("Tobiano Apps", "Home of Tobiano Apps.", main))
 
