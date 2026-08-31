@@ -290,6 +290,8 @@ LEGAL = [
     ("src/legal/android/dotscape/Terms.md",    "android/dotscape/legal/terms.html"),
     ("src/legal/android/thedepths/Privacy.md", "android/thedepths/legal/privacy.html"),
     ("src/legal/android/thedepths/Terms.md",   "android/thedepths/legal/terms.html"),
+    ("src/legal/android/molten/Privacy.md",    "android/molten/legal/privacy.html"),
+    ("src/legal/android/molten/Terms.md",      "android/molten/legal/terms.html"),
     ("src/legal/ios/sunnyside/Privacy.md",     "ios/sunnyside/legal/privacy.html"),
     ("src/legal/ios/sunnyside/Terms.md",       "ios/sunnyside/legal/terms.html"),
 ]
