@@ -195,7 +195,7 @@ FAQ = [
   '<li>do not spoof your location</li>'
   '<li>do not use a VPN, ad blocker or other networking restrictions</li></ol>'
   '<p>As an alternative, instead of using GPS location, use the '
-  '<a href="https://tobianoapps.com/android/sunnyside/images/sunnyside_search_location.png">search function</a> '
+  '<a href="https://www.tobianoapps.com/android/sunnyside/images/sunnyside_search_location.png">search function</a> '
   "instead. Location won't update automatically but as long as you're not travelling long distances, UV data "
   'will remain accurate.</p>'),
  ("I asked for help in the Google Play Store review section so why are you asking me to send an email?",
