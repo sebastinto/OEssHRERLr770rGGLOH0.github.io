@@ -298,6 +298,30 @@ LEGAL = [
     ("src/legal/ios/k7/Terms.md",              "ios/k7/legal/terms.html"),
 ]
 
+# ---------------------------------------------------------------- verbatim pages
+# The K7 marketing page is hand-authored HTML and CSS with its own type and its own dark
+# palette — nothing like the shell every other page here shares. Rather than rebuild it out
+# of f-strings, build.py copies it through untouched, so this stays the one command that
+# produces the whole site.
+STATIC = [("src/k7", "k7")]
+
+def build_static():
+    for src, dest in STATIC:
+        src_dir = os.path.join(ROOT, src)
+        if not os.path.isdir(src_dir):
+            continue
+        for base, _, files in os.walk(src_dir):
+            for name in files:
+                if name.startswith("."):
+                    continue
+                full = os.path.join(base, name)
+                rel = os.path.join(dest, os.path.relpath(full, src_dir))
+                out = os.path.join(ROOT, rel)
+                os.makedirs(os.path.dirname(out), exist_ok=True)
+                with open(full, "rb") as f_in, open(out, "wb") as f_out:
+                    f_out.write(f_in.read())
+                print("copied", rel)
+
 def build_legal():
     for md, out in LEGAL:
         title, description, body = parse_md(os.path.join(ROOT, md))
@@ -308,4 +332,5 @@ if __name__ == "__main__":
     build_index()
     build_faq()
     build_legal()
+    build_static()
     print("done.")

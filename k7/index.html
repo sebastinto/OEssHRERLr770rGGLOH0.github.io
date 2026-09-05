@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>K7 — Local music player for iOS</title>
+<meta name="description" content="K7 is a music player for the library on your own drive. Every format, a real 10-band EQ, gapless playback. No account, no subscription, no upload.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/k7/k7-icon.png">
+<meta property="og:title" content="K7 — Local music player for iOS">
+<meta property="og:description" content="A music player for the library on your own drive. No account, no subscription, no upload.">
+<meta property="og:image" content="https://www.tobianoapps.com/k7/k7-icon.png">
+<meta property="og:url" content="https://www.tobianoapps.com/k7">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/k7/k7.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/k7/">
+      <img src="/k7/k7-icon.png" alt="">
+      <span>K7</span>
+    </a>
+    <div class="nav-spacer"></div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#price">Price</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <span class="soon-pill"><span class="dot"></span>Coming Soon</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge"><span class="dot"></span>COMING TO iPHONE</span>
+      <h1>Every track<br>you already<br><span class="pink-i">own.</span></h1>
+      <p class="lede">A music player for the library on your own drive. FLAC, ALAC, MP3 and everything else, played straight from your folders, with a proper 10-band EQ and gapless playback. No account, no subscription, no upload.</p>
+      <div class="cta-row">
+        <span class="cta"><strong>Coming Soon</strong></span>
+        <span class="cta-note">One purchase.<br>No subscription, ever.</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>14</b><span>FORMATS</span></div>
+        <div class="stat"><b>24/192</b><span>HI-RES OUT</span></div>
+        <div class="stat"><b>0</b><span>TRACKERS</span></div>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <div class="phone tilt">
+        <div class="notch"></div>
+        <div class="np">
+          <div class="np-art">
+            <div class="sleeve" data-sleeve="0"></div>
+            <div class="np-head">
+              <span>⌄</span>
+              <span class="from">FROM FOLDER<b>Rips / Neon Halcyon</b></span>
+              <span>⋯</span>
+            </div>
+            <span class="np-fmt">FLAC 24/96</span>
+          </div>
+          <div class="np-body">
+            <div class="np-title">Static Bloom</div>
+            <div class="np-artist">Neon Halcyon</div>
+            <div class="wave" data-wave><span class="head"></span></div>
+            <div class="times"><span>1:35</span><span>−2:37</span></div>
+            <div class="transport">
+              <span class="g">◀◀</span>
+              <span class="play">❙❙</span>
+              <span class="g">▶▶</span>
+            </div>
+            <div class="acts"><span>Queue</span><span>Art</span><span>Studio</span><span>Tune</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <ul id="marquee"></ul>
+</div>
+
+<section class="feat" id="features">
+  <div class="wrap">
+    <div>
+      <div class="count"><span id="f-num">01</span> / 05</div>
+      <h3 id="f-head"></h3>
+      <p class="body" id="f-body"></p>
+      <div class="beats" role="tablist" id="beats"></div>
+    </div>
+    <div>
+      <div class="phone" id="f-phone">
+        <div class="notch"></div>
+        <div class="m-bloom" id="f-bloom"></div>
+        <div id="f-mock"></div>
+        <div class="mini">
+          <div class="cv" data-sleeve="0"></div>
+          <div class="mt"><b>Static Bloom</b><i>Neon Halcyon</i></div>
+          <span style="font-size:13px">❙❙</span>
+        </div>
+        <div class="tabs" id="f-tabs">
+          <span>Library</span><span>Files</span><span>Art</span><span>Studio</span><span>Tune</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="wrap">
+    <div>
+      <div class="kicker">PRICE</div>
+      <h2>Pay once.<br><span class="pink-i">Own it.</span></h2>
+      <p class="lede">One purchase unlocks K7 across every device on your Apple ID, including all future updates to this version. K7 has no server of its own, so there is nothing to subscribe to.</p>
+    </div>
+    <div class="panel">
+      <div class="head"><b>One purchase</b><span>NO SUBSCRIPTION</span></div>
+      <ul>
+        <li>Fourteen audio formats, up to 24-bit / 192 kHz</li>
+        <li>10-band graphic and parametric EQ</li>
+        <li>Gapless playback and ReplayGain</li>
+        <li>Folder browser, Wi-Fi transfer and AirDrop import</li>
+        <li>Widgets, Live Activities, Shortcuts and lock screen art</li>
+        <li>Every update to this version, free</li>
+        <li>Owner pricing on any future major version</li>
+      </ul>
+      <p class="foot">Price announced at launch.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker">QUESTIONS</div>
+    <h2>Questions worth answering</h2>
+    <div class="faq">
+      <details open>
+        <summary>How do I get my music onto the iPhone?</summary>
+        <div class="a">Three ways. Open the Wi-Fi transfer screen and drag a folder from your Mac in the browser, AirDrop an album straight into K7, or pick any folder already sitting in Files. Tags, artwork and folder structure are read on the way in.</div>
+      </details>
+      <details>
+        <summary>Which formats does it play?</summary>
+        <div class="a">FLAC, ALAC, MP3, AAC, M4A, WAV, AIFF, OGG, Opus, DSF, DFF, MPC, TTA and WavPack — fourteen in all, up to 24-bit / 192 kHz output. WMA, APE and AC3 are not included, for patent and licensing reasons rather than technical ones. Broken or partially tagged files still play; K7 falls back to the filename. Files with old FairPlay DRM are recognised and explained rather than silently skipped.</div>
+      </details>
+      <details>
+        <summary>Does it touch my Apple Music library?</summary>
+        <div class="a">No. K7 has no access to it and never asks for permission to read it. K7 plays only the files you import, and it never modifies, uploads or re-encodes anything outside the folders you point it at.</div>
+      </details>
+      <details>
+        <summary>Is there a subscription?</summary>
+        <div class="a">No. There is no recurring charge and no server bill to pass on. One purchase buys K7 and every update to it, on every device on your Apple ID. If a future version is a substantial rework rather than an update, it may ship as a separate paid app with a discounted upgrade path for existing owners.</div>
+      </details>
+      <details>
+        <summary>What about the car, widgets and the lock screen?</summary>
+        <div class="a">Lock screen artwork, Live Activities, a home screen widget, Shortcuts actions and Siri playback are all included, and playback controls appear on your car's screen through CarPlay's Now Playing. Browsing your library from the car is not in the first release — it needs an entitlement Apple only grants to apps already on the store, so it is the first thing on the list after launch.</div>
+      </details>
+      <details>
+        <summary>What leaves my phone?</summary>
+        <div class="a">Nothing, unless you ask for it. K7 has no account, no analytics and no tracking of any kind. Artwork search sends the album and artist to the music catalogues and nothing else. Studio is off until you add your own Anthropic, OpenAI or Google key, and then your prompt and a summary of your library go from your phone straight to that provider, billed to you — never any audio, never a file path. Each is asked for separately, and declining leaves the rest of the app working.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2><span class="pink-i">Your</span> music.<br><span class="pink-i">Your</span> device.</h2>
+    <div class="colophon">
+      <span class="id">K7 · LOCAL MUSIC FOR iOS</span>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#price">Price</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:contact@tobianoapps.com">Contact</a>
+        <a href="/ios/k7/legal/privacy">Privacy</a>
+        <a href="/ios/k7/legal/terms">Terms</a>
+        <a href="/">Tobiano Apps</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Six placeholder sleeves, built from gradients. Real cover art replaces these before launch.
+const SLEEVES = [
+  ["#ff2e93", "#4a1730"], ["#ffb020", "#5a2a00"], ["#8b6bff", "#241a4a"],
+  ["#c8f542", "#2a3a08"], ["#38e8ff", "#062a34"], ["#ff5a1f", "#3a1206"],
+];
+function paintSleeve(el, i) {
+  const [a, b] = SLEEVES[i % SLEEVES.length];
+  el.style.background =
+    `radial-gradient(120% 90% at 22% 14%, ${a}cc, transparent 62%),` +
+    `linear-gradient(155deg, ${b}, #08070a 78%)`;
+}
+document.querySelectorAll("[data-sleeve]").forEach(el => paintSleeve(el, +el.dataset.sleeve));
+
+// The scrubber is drawn from the audio, so the bars are uneven rather than a tidy curve.
+// It scrolls under a fixed playhead instead of filling left to right.
+function paintWave(el) {
+  const n = 34, head = el.querySelector(".head");
+  for (let i = 0; i < n; i++) {
+    const bar = document.createElement("i");
+    const t = i / (n - 1);
+    const h = 22 + Math.abs(Math.sin(i * 1.7) * 0.6 + Math.sin(i * 0.6) * 0.4) * 74;
+    bar.style.height = h + "%";
+    if (t < 0.5) {
+      bar.style.opacity = (0.55 + t * 0.9).toFixed(2);
+    } else {
+      bar.style.background = "var(--accent)";
+      bar.style.opacity = (0.9 - (t - 0.5) * 1.0).toFixed(2);
+    }
+    el.insertBefore(bar, head);
+  }
+}
+document.querySelectorAll("[data-wave]").forEach(paintWave);
+
+const FORMATS = ["FLAC","ALAC","MP3","AAC","M4A","WAV","AIFF","OGG","OPUS","DSF","DFF","MPC","TTA","WV"];
+const HI = new Set(["FLAC","ALAC","DSF","OPUS"]);
+const mq = document.getElementById("marquee");
+// Duplicated so the -50% loop is seamless.
+for (let pass = 0; pass < 2; pass++) {
+  FORMATS.forEach(f => {
+    const li = document.createElement("li");
+    li.textContent = f;
+    if (HI.has(f)) li.className = "hi";
+    mq.appendChild(li);
+  });
+}
+
+const tile = c => `<span class="tile" style="background:linear-gradient(140deg,${c}55,${c}18);border:1px solid ${c}44"></span>`;
+
+const BEATS = [
+  {
+    label: "Now Playing", accent: "#ff2e93", sleeve: 0, full: true,
+    head: 'It’s called album <span class="pink-i">art</span> for a reason',
+    body: "Someone designed that sleeve to be looked at, so K7 gives it the entire width of the screen and pulls the background out of it. Title, scrubber and transport sit underneath in one column — and the scrubber is drawn from the real audio, so you can see the loud and quiet parts coming. Swipe the sleeve to move between tracks.",
+    mock: `<div class="np" style="position:absolute;inset:0">
+        <div class="np-art"><div class="sleeve" data-sleeve="0"></div><span class="np-fmt">FLAC 24/96</span></div>
+        <div class="np-body">
+          <div class="np-title">Static Bloom</div>
+          <div class="np-artist">Neon Halcyon</div>
+          <div class="wave" data-wave><span class="head"></span></div>
+          <div class="times"><span>1:35</span><span>−2:37</span></div>
+          <div class="transport"><span class="g">◀◀</span><span class="play">❙❙</span><span class="g">▶▶</span></div>
+          <div class="acts"><span>Queue</span><span>Art</span><span>Studio</span><span>Tune</span></div>
+        </div>
+      </div>`,
+  },
+  {
+    label: "Files", accent: "#ffb020", sleeve: 1,
+    head: "Your folders, exactly as you left them",
+    body: "No import step and no re-organising. Point K7 at a folder and it reads the tags and art as it goes. Wi-Fi transfer, AirDrop and Files all end up in the same tree.",
+    mock: `<div class="mock">
+        <div class="m-kick">LIBRARY</div>
+        <div class="m-title">Files</div>
+        <div class="m-sub">K7 plays the folder tree as it is. Nothing is copied or renamed.</div>
+        <div class="pills"><span class="on">Wi-Fi transfer</span><span>Files</span><span>AirDrop</span></div>
+        <div class="rows">
+          <div class="row">${tile("#ff2e93")}<div class="rt"><b>Neon Halcyon</b><i>2 albums · 1.8 GB</i></div><span class="rn">19</span></div>
+          <div class="row">${tile("#ffb020")}<div class="rt"><b>Kōhaku</b><i>4 albums · 3.4 GB</i></div><span class="rn">41</span></div>
+          <div class="row">${tile("#8b6bff")}<div class="rt"><b>The Ember Field</b><i>1 album · 2.1 GB</i></div><span class="rn">11</span></div>
+          <div class="row">${tile("#c8f542")}<div class="rt"><b>Vasa</b><i>3 albums · 940 MB</i></div><span class="rn">28</span></div>
+          <div class="row">${tile("#38e8ff")}<div class="rt"><b>Bootlegs &amp; Radio</b><i>147 files · 5.9 GB</i></div><span class="rn">147</span></div>
+        </div>
+      </div>`,
+  },
+  {
+    label: "Artwork", accent: "#8b6bff", sleeve: 2,
+    head: "Find the art your rip is missing",
+    body: "Search MusicBrainz, the Cover Art Archive, Deezer and iTunes for covers. Compare them side by side, pick one, and K7 writes it into the file’s own tags so it stays with your music.",
+    mock: `<div class="mock">
+        <div class="m-kick">ARTWORK</div>
+        <div class="m-title">Art search</div>
+        <div class="card" style="margin-top:12px">Neon Halcyon — Static Bloom</div>
+        <div class="pills"><span class="on">MusicBrainz</span><span class="on">Cover Art Archive</span><span>Deezer</span><span>iTunes</span></div>
+        <div class="grid2">
+          <figure><div class="sq sel" data-sleeve="0"></div><figcaption>3000×3000 · Cover Art Archive</figcaption></figure>
+          <figure><div class="sq" data-sleeve="2"></div><figcaption>1400×1400 · MusicBrainz</figcaption></figure>
+          <figure><div class="sq" data-sleeve="4"></div><figcaption>1000×1000 · iTunes</figcaption></figure>
+          <figure><div class="sq" data-sleeve="5"></div><figcaption>600×600 · embedded</figcaption></figure>
+        </div>
+      </div>`,
+  },
+  {
+    label: "Studio", accent: "#c8f542", sleeve: 3,
+    head: "Describe a playlist, get a playlist",
+    body: "Type what you want to hear and K7 assembles it from the tracks on your phone. Add your own Anthropic, OpenAI or Google key; only titles and tags are sent, and they go from your phone straight to your provider.",
+    mock: `<div class="mock">
+        <div class="m-kick">STUDIO</div>
+        <div class="m-title">Playlist</div>
+        <div class="card">Late night drive. Long instrumental builds, nothing with vocals up front, keep it under 100 BPM.
+          <div class="meta"><span>1,284 TRACKS IN SCOPE</span><span>~1.2K TOKENS</span></div>
+        </div>
+        <div class="rows">
+          <div class="row"><span class="idx">01</span><div class="rt"><b>Marsh Light</b><i>88 BPM · instrumental</i></div><span class="rn">3:38</span></div>
+          <div class="row"><span class="idx">02</span><div class="rt"><b>Pinewater</b><i>92 BPM · pads, no vocal</i></div><span class="rn">4:26</span></div>
+          <div class="row"><span class="idx">03</span><div class="rt"><b>Corridor</b><i>96 BPM · darker mid</i></div><span class="rn">2:58</span></div>
+          <div class="row"><span class="idx">04</span><div class="rt"><b>Signal Fade</b><i>84 BPM · long build</i></div><span class="rn">5:33</span></div>
+          <div class="row"><span class="idx">05</span><div class="rt"><b>Nightcrawl</b><i>99 BPM · closes dark</i></div><span class="rn">4:47</span></div>
+        </div>
+      </div>`,
+  },
+  {
+    label: "Tune", accent: "#38e8ff", sleeve: 4,
+    head: "A different EQ for every output",
+    body: "Ten bands, plus a parametric mode, gapless and ReplayGain. Save a curve for your headphones and another for the car, and K7 switches between them automatically.",
+    mock: `<div class="mock">
+        <div class="m-kick">TUNE</div>
+        <div class="m-title">Output</div>
+        <div class="m-sub">Tap anywhere on a scale. K7 keeps one curve per output.</div>
+        <div style="margin-top:14px">
+          ${[["Low","+3.6 dB",13],["Mid","−1.2 dB",9],["High","+1.2 dB",11],["Stage","60%",12],["Warmth","75%",15]]
+            .map(([n, v, at]) => `<div class="eqrow">
+              <div class="lab"><span>${n}</span><i style="color:#38e8ff">${v}</i></div>
+              <div class="ticks">${Array.from({length: 21}, (_, i) =>
+                `<i style="height:${i === at ? 20 : i % 5 === 0 ? 12 : 7}px;background:${
+                  i === at ? "#fff" : i < at ? "#38e8ff88" : "rgba(255,255,255,.14)"}"></i>`).join("")}</div>
+            </div>`).join("")}
+        </div>
+        <div class="pills"><span>Flat</span><span class="on">Tape</span><span>Vocal</span><span>Late night</span></div>
+      </div>`,
+  },
+];
+
+const beatsEl = document.getElementById("beats");
+BEATS.forEach((b, i) => {
+  const el = document.createElement("button");
+  el.className = "beat";
+  el.type = "button";
+  el.setAttribute("role", "tab");
+  el.innerHTML = `<i>0${i + 1}</i><b>${b.label}</b>`;
+  el.addEventListener("click", () => select(i));
+  beatsEl.appendChild(el);
+});
+
+function select(i) {
+  const b = BEATS[i];
+  document.getElementById("f-num").textContent = "0" + (i + 1);
+  document.getElementById("f-head").innerHTML = b.head;
+  document.getElementById("f-body").textContent = b.body;
+  document.getElementById("f-mock").innerHTML = b.mock;
+  document.getElementById("f-phone").classList.toggle("full", !!b.full);
+  document.getElementById("f-bloom").style.background =
+    `radial-gradient(closest-side, ${b.accent}38, transparent)`;
+  [...beatsEl.children].forEach((el, j) => {
+    el.setAttribute("aria-selected", j === i);
+    el.querySelector("i").style.color = j === i ? b.accent : "";
+  });
+  [...document.getElementById("f-tabs").children].forEach((el, j) =>
+    el.classList.toggle("on", j === i));
+  // The mock is rebuilt each time, so its sleeves and waveform are painted again.
+  document.querySelectorAll("#f-mock [data-sleeve]").forEach(el => paintSleeve(el, +el.dataset.sleeve));
+  document.querySelectorAll("#f-mock [data-wave]").forEach(paintWave);
+}
+select(0);
+</script>
+
+</body>
+</html>
