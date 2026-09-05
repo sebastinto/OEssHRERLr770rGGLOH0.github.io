@@ -294,6 +294,8 @@ LEGAL = [
     ("src/legal/android/molten/Terms.md",      "android/molten/legal/terms.html"),
     ("src/legal/ios/sunnyside/Privacy.md",     "ios/sunnyside/legal/privacy.html"),
     ("src/legal/ios/sunnyside/Terms.md",       "ios/sunnyside/legal/terms.html"),
+    ("src/legal/ios/k7/Privacy.md",            "ios/k7/legal/privacy.html"),
+    ("src/legal/ios/k7/Terms.md",              "ios/k7/legal/terms.html"),
 ]
 
 def build_legal():
