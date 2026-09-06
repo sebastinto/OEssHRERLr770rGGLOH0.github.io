@@ -25,6 +25,7 @@ Link to the privacy policy of third party service providers that K7 can contact,
 *   [MusicBrainz (MetaBrainz Foundation)](https://metabrainz.org/privacy)
 *   [Cover Art Archive (Internet Archive)](https://archive.org/about/terms.php)
 *   [Deezer](https://www.deezer.com/legal/personal-datas)
+*   [Discogs](https://support.discogs.com/hc/en-us/articles/360009334593-Discogs-Privacy-Policy)
 *   [Anthropic](https://www.anthropic.com/legal/privacy)
 *   [OpenAI](https://openai.com/policies/privacy-policy/)
 *   [Google](https://policies.google.com/privacy)
@@ -39,9 +40,21 @@ K7 does not request access to your Apple Music library and cannot read it.
 
 ### **Album Artwork Lookups**
 
-If you search for cover art, K7 sends the album and artist you are searching for to the music catalogues, and nothing else — not your library, not your files, not who you are. The catalogues it may contact are musicbrainz.org, coverartarchive.org, api.deezer.com and itunes.apple.com.
+If you search for cover art, K7 sends the album and artist you are searching for to the music catalogues, and nothing else — not your library, not your files, not who you are. The catalogues it may contact are musicbrainz.org, coverartarchive.org, api.deezer.com and itunes.apple.com. Discogs is separate — see below.
 
 When you choose a cover, K7 downloads that image from wherever the catalogue points, which is usually not the catalogue's own domain. K7 identifies itself to these services by name and by a link to its web page, because MusicBrainz requires a contactable client. It sends no identifier for you or your device.
+
+### **Artist Pictures**
+
+If artist pictures are switched on — they are by default, under Settings — K7 looks up the artists shown on the screen you are looking at, not your whole library, and only once you have already agreed to artwork lookups. It sends an artist name to Deezer and nothing else.
+
+The pictures are kept inside K7 rather than written into your files, because an artist is not a file. They live in the app's own storage, are named by a scrambled form of the artist name rather than the name itself, and are deleted with the app. Settings has a switch to turn the whole thing off and a button to delete every picture already fetched.
+
+### **Discogs**
+
+Discogs is off unless you add a personal access token from your own Discogs account, and it is asked for separately from the other catalogues because it is a different kind of request. The token identifies the search as coming from your account — the other catalogues are not told who you are, and Discogs is. That is the entire reason it has its own permission rather than sharing the artwork one.
+
+It is not billed to you. The token exists because Discogs sends no cover images at all to an anonymous request, and it raises the number of requests per minute you are allowed.
 
 ### **Web Search for Covers**
 
