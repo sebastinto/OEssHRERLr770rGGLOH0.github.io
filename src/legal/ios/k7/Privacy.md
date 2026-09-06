@@ -73,7 +73,9 @@ To find and fix the failures we would otherwise never hear about, K7 uses [Sentr
 
 It is deliberately narrower than Sentry's defaults. K7 sends no screenshot, no view hierarchy, no session replay, no performance traces, no personal information, and no identifier for you or your device. It records no automatic breadcrumbs, including none for network requests — those would carry the album titles you searched for.
 
-Nothing about your library reaches it: not a track title, not a file path, not a folder name. This is the only monitoring in the app. There is no advertising, no behavioural analytics, and no tracking of you across other apps or websites, and the reports are not used to identify you.
+Nothing about your library reaches it: not a track title, not a file path, not a folder name. This is the only monitoring in the app.
+
+You can turn it off. Settings has a Crash reporting switch under Diagnostics; switching it off stops the reporter immediately rather than at the next launch, and nothing further is sent. There is no advertising, no behavioural analytics, and no tracking of you across other apps or websites, and the reports are not used to identify you.
 
 ### **Purchases**
 
