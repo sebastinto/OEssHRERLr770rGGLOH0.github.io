@@ -29,6 +29,7 @@ Link to the privacy policy of third party service providers that K7 can contact,
 *   [OpenAI](https://openai.com/policies/privacy-policy/)
 *   [Google](https://policies.google.com/privacy)
 *   [Serper](https://serper.dev/privacy-policy)
+*   [Sentry](https://sentry.io/privacy/)
 
 ### **Your Music Stays on Your Device**
 
@@ -64,7 +65,15 @@ Wi-Fi transfer opens a page on your local network so you can drag music from a c
 
 K7 contains no advertising, no attribution or measurement code, and no third-party tracking SDK. It does not track you across other apps or websites, and it does not build a profile of you.
 
-This version of K7 also includes no analytics and no crash reporting. If we later add crash or stability reporting to help us fix bugs, we will describe it here before that version ships.
+K7 includes no analytics. It does use crash and stability reporting, which is described below.
+
+### **Crash and Stability Reporting**
+
+To find and fix the failures we would otherwise never hear about, K7 uses [Sentry](https://sentry.io/). When the app crashes or hangs, Sentry receives the error, the app version, and your device model and operating system version.
+
+It is deliberately narrower than Sentry's defaults. K7 sends no screenshot, no view hierarchy, no session replay, no performance traces, no personal information, and no identifier for you or your device. It records no automatic breadcrumbs, including none for network requests — those would carry the album titles you searched for.
+
+Nothing about your library reaches it: not a track title, not a file path, not a folder name. This is the only monitoring in the app. There is no advertising, no behavioural analytics, and no tracking of you across other apps or websites, and the reports are not used to identify you.
 
 ### **Purchases**
 
