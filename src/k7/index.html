@@ -122,10 +122,12 @@
       <div class="head"><b>One purchase</b><span>NO SUBSCRIPTION</span></div>
       <ul>
         <li>Fourteen audio formats, up to 24-bit / 192 kHz</li>
-        <li>10-band graphic and parametric EQ</li>
+        <li>10-band EQ, with a curve remembered per output</li>
         <li>Gapless playback and ReplayGain</li>
         <li>Folder browser, Wi-Fi transfer and AirDrop import</li>
-        <li>Widgets, Live Activities, Shortcuts and lock screen art</li>
+        <li>Playlists, favourites and a ban list, kept on device</li>
+        <li>Lyrics from your files, or looked up if you ask</li>
+        <li>Home screen widgets with transport, Shortcuts and lock screen art</li>
         <li>Every update to this version, free</li>
         <li>Owner pricing on any future major version</li>
       </ul>
@@ -157,7 +159,7 @@
       </details>
       <details>
         <summary>What about the car, widgets and the lock screen?</summary>
-        <div class="a">Lock screen artwork, Live Activities, a home screen widget, Shortcuts actions and Siri playback are all included, and playback controls appear on your car's screen through CarPlay's Now Playing. Browsing your library from the car is not in the first release — it needs an entitlement Apple only grants to apps already on the store, so it is the first thing on the list after launch.</div>
+        <div class="a">Lock screen artwork, home screen widgets, Shortcuts actions and Siri playback are all included, and playback controls appear on your car's screen through CarPlay's Now Playing. The widget carries play, skip and a favourite star, and what is playing appears in the Dynamic Island and Control Center the way any audio app's does. Browsing your library from the car is not in the first release — it needs an entitlement Apple only grants to apps already on the store, so it is the first thing on the list after launch.</div>
       </details>
       <details>
         <summary>What leaves my phone?</summary>
@@ -296,9 +298,25 @@ const BEATS = [
       </div>`,
   },
   {
+    label: "Lyrics", accent: "#2ee6a8", sleeve: 5,
+    head: "The words, when there are words to have",
+    body: "An .lrc file next to a track wins, then whatever the file carries in its own tags, and only then does K7 look anything up — off by default, and it asks before the first request. Timed lyrics follow the music; a plain transcript says so rather than sitting still and looking broken.",
+    mock: `<div class="mock">
+        <div class="m-kick">NOW PLAYING</div>
+        <div class="m-title">The Weight</div>
+        <div class="m-sub">Weval — The Weight</div>
+        <div class="rows">
+          <div class="row"><div class="rt"><b style="opacity:.45">I can feel it coming</b></div></div>
+          <div class="row"><div class="rt"><b style="color:#2ee6a8">Hold the weight a while</b></div></div>
+          <div class="row"><div class="rt"><b style="opacity:.45">And let it go again</b></div></div>
+        </div>
+        <div class="pills" style="margin-top:12px"><span class="on">.lrc beside the track</span><span>In the file's tags</span><span>LRCLIB</span></div>
+      </div>`,
+  },
+  {
     label: "Studio", accent: "#c8f542", sleeve: 3,
     head: "Describe a playlist, get a playlist",
-    body: "Type what you want to hear and K7 assembles it from the tracks on your phone. Add your own Anthropic, OpenAI or Google key; only titles and tags are sent, and they go from your phone straight to your provider.",
+    body: "Type what you want to hear and K7 assembles it from the tracks on your phone, names the playlist, and says in a few words why each track is on it. Save it and it is a playlist like any other. Add your own Anthropic, OpenAI or Google key; only titles and tags are sent, and they go from your phone straight to your provider.",
     mock: `<div class="mock">
         <div class="m-kick">STUDIO</div>
         <div class="m-title">Playlist</div>
@@ -306,24 +324,24 @@ const BEATS = [
           <div class="meta"><span>1,284 TRACKS IN SCOPE</span><span>~1.2K TOKENS</span></div>
         </div>
         <div class="rows">
-          <div class="row"><span class="idx">01</span><div class="rt"><b>Marsh Light</b><i>88 BPM · instrumental</i></div><span class="rn">3:38</span></div>
-          <div class="row"><span class="idx">02</span><div class="rt"><b>Pinewater</b><i>92 BPM · pads, no vocal</i></div><span class="rn">4:26</span></div>
-          <div class="row"><span class="idx">03</span><div class="rt"><b>Corridor</b><i>96 BPM · darker mid</i></div><span class="rn">2:58</span></div>
-          <div class="row"><span class="idx">04</span><div class="rt"><b>Signal Fade</b><i>84 BPM · long build</i></div><span class="rn">5:33</span></div>
-          <div class="row"><span class="idx">05</span><div class="rt"><b>Nightcrawl</b><i>99 BPM · closes dark</i></div><span class="rn">4:47</span></div>
+          <div class="row"><span class="idx">01</span><div class="rt"><b>An Eagle In Your Mind</b><i>slow build · no vocal</i></div><span class="rn">6:26</span></div>
+          <div class="row"><span class="idx">02</span><div class="rt"><b>A Tune for Us</b><i>sparse · long tail</i></div><span class="rn">5:53</span></div>
+          <div class="row"><span class="idx">03</span><div class="rt"><b>The Weight</b><i>92 BPM · instrumental</i></div><span class="rn">4:46</span></div>
+          <div class="row"><span class="idx">04</span><div class="rt"><b>Wise One</b><i>ballad tempo · modal</i></div><span class="rn">9:02</span></div>
+          <div class="row"><span class="idx">05</span><div class="rt"><b>Olha Maria</b><i>rubato · closes quiet</i></div><span class="rn">10:29</span></div>
         </div>
       </div>`,
   },
   {
     label: "Tune", accent: "#38e8ff", sleeve: 4,
     head: "A different EQ for every output",
-    body: "Ten bands, plus a parametric mode, gapless and ReplayGain. Save a curve for your headphones and another for the car, and K7 switches between them automatically.",
+    body: "Ten bands under three scales, gapless and ReplayGain. K7 keeps a curve for each output and switches with the hardware — headphones, the car, the speaker — so the one you set for your headphones is the one you get when you plug them in.",
     mock: `<div class="mock">
         <div class="m-kick">TUNE</div>
-        <div class="m-title">Output</div>
-        <div class="m-sub">Tap anywhere on a scale. K7 keeps one curve per output.</div>
+        <div class="m-title">Headphones</div>
+        <div class="m-sub">Tap anywhere on a scale. This curve is the one your headphones get.</div>
         <div style="margin-top:14px">
-          ${[["Low","+3.6 dB",13],["Mid","−1.2 dB",9],["High","+1.2 dB",11],["Stage","60%",12],["Warmth","75%",15]]
+          ${[["Low","+3.6 dB",13],["Mid","−1.2 dB",9],["High","+1.2 dB",11]]
             .map(([n, v, at]) => `<div class="eqrow">
               <div class="lab"><span>${n}</span><i style="color:#38e8ff">${v}</i></div>
               <div class="ticks">${Array.from({length: 21}, (_, i) =>
