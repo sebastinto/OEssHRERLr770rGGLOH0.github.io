@@ -88,7 +88,7 @@ It is deliberately narrower than Sentry's defaults. K7 sends no screenshot, no v
 
 Nothing about your library reaches it: not a track title, not a file path, not a folder name. This is the only monitoring in the app.
 
-You can turn it off. Settings has a Crash reporting switch under Diagnostics; switching it off stops the reporter immediately rather than at the next launch, and nothing further is sent. There is no advertising, no behavioural analytics, and no tracking of you across other apps or websites, and the reports are not used to identify you.
+You can turn it off. Settings has a Crash reporting switch under Diagnostics; switching it off stops the reporter immediately rather than at the next launch, and nothing further is sent. There is no advertising, no behavioral analytics, and no tracking of you across other apps or websites, and the reports are not used to identify you.
 
 ### **Purchases**
 
