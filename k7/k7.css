@@ -183,7 +183,7 @@ h1 {
 .phone {
   position: relative;
   width: 340px;
-  height: 720px;
+  height: 706px;
   margin: 0 auto;
   border-radius: 44px;
   border: 1px solid var(--hair-strong);
@@ -598,8 +598,8 @@ footer h2 { font-size: 64px; letter-spacing: -0.05em; }
 .widgets h2 { font-size: 40px; line-height: 1.02; letter-spacing: -0.04em; margin: 10px 0 14px; }
 .widgets p { color: var(--t2); font-size: 13.5px; line-height: 1.65; max-width: 42ch; }
 .w-shots { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
-.w-shots img { display: block; width: 100%; max-width: 400px; height: auto; filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.5)); }
-.w-shots img:last-child { max-width: 190px; }
+.w-shots img { display: block; width: 100%; max-width: 268px; height: auto; filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.5)); }
+.w-shots img:last-child { max-width: 124px; }
 @media (max-width: 780px) {
   .widgets .wrap { grid-template-columns: 1fr; gap: 28px; }
   .widgets h2 { font-size: 30px; }

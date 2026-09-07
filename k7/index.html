@@ -52,30 +52,7 @@
     </div>
     <div class="hero-phone">
       <div class="phone tilt">
-        <div class="notch"></div>
-        <div class="np">
-          <div class="np-art">
-            <div class="sleeve" data-sleeve="0"></div>
-            <div class="np-head">
-              <span>⌄</span>
-              <span class="from">FROM FOLDER<b>Rips / Neon Halcyon</b></span>
-              <span>⋯</span>
-            </div>
-            <span class="np-fmt">FLAC 24/96</span>
-          </div>
-          <div class="np-body">
-            <div class="np-title">The Weight</div>
-            <div class="np-artist">Weval</div>
-            <div class="wave" data-wave><span class="head"></span></div>
-            <div class="times"><span>1:35</span><span>−2:37</span></div>
-            <div class="transport">
-              <span class="g">◀◀</span>
-              <span class="play">❙❙</span>
-              <span class="g">▶▶</span>
-            </div>
-            <div class="acts"><span>Queue</span><span>Art</span><span>Studio</span><span>Tune</span></div>
-          </div>
-        </div>
+        <img class="shot" src="shots/nowplaying.jpg" alt="K7 — Now Playing" fetchpriority="high">
       </div>
     </div>
   </div>
@@ -88,24 +65,15 @@
 <section class="feat" id="features">
   <div class="wrap">
     <div>
-      <div class="count"><span id="f-num">01</span> / 05</div>
+      <div class="count"><span id="f-num">01</span> / 06</div>
       <h3 id="f-head"></h3>
       <p class="body" id="f-body"></p>
       <div class="beats" role="tablist" id="beats"></div>
     </div>
     <div>
       <div class="phone" id="f-phone">
-        <div class="notch"></div>
         <div class="m-bloom" id="f-bloom"></div>
         <div id="f-mock"></div>
-        <div class="mini">
-          <div class="cv" data-sleeve="0"></div>
-          <div class="mt"><b>Static Bloom</b><i>Neon Halcyon</i></div>
-          <span style="font-size:13px">❙❙</span>
-        </div>
-        <div class="tabs" id="f-tabs">
-          <span>Library</span><span>Files</span><span>Art</span><span>Studio</span><span>Tune</span>
-        </div>
       </div>
     </div>
   </div>
@@ -321,8 +289,6 @@ function select(i) {
     el.setAttribute("aria-selected", j === i);
     el.querySelector("i").style.color = j === i ? b.accent : "";
   });
-  [...document.getElementById("f-tabs").children].forEach((el, j) =>
-    el.classList.toggle("on", j === i));
   // The mock is rebuilt each time, so its sleeves and waveform are painted again.
   document.querySelectorAll("#f-mock [data-sleeve]").forEach(el => paintSleeve(el, +el.dataset.sleeve));
   document.querySelectorAll("#f-mock [data-wave]").forEach(paintWave);
