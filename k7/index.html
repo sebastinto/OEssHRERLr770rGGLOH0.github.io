@@ -111,6 +111,22 @@
   </div>
 </section>
 
+<section class="widgets">
+  <div class="wrap">
+    <div class="w-copy">
+      <div class="kick">HOME SCREEN</div>
+      <h2>Playing, without opening anything</h2>
+      <p>The cover, what is on, and the transport — skip, pause and the star that marks a
+        track a favourite. Pressing one does not open K7: the command runs inside the app,
+        which is already awake because it is the thing playing.</p>
+    </div>
+    <div class="w-shots">
+      <img src="shots/widget-medium.png" alt="K7 medium widget on the home screen" loading="lazy">
+      <img src="shots/widget-small.png" alt="K7 small widget on the home screen" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <section class="price" id="price">
   <div class="wrap">
     <div>
@@ -247,110 +263,37 @@ const BEATS = [
     label: "Now Playing", accent: "#ff2e93", sleeve: 0, full: true,
     head: 'It’s called album <span class="pink-i">art</span> for a reason',
     body: "Someone designed that sleeve to be looked at, so K7 puts it front and center and pulls the background out of it. Title, scrubber and transport sit underneath in one column — and the scrubber is drawn from the real audio, so you can see the loud and quiet parts coming. Swipe the sleeve to move between tracks.",
-    mock: `<div class="np" style="position:absolute;inset:0">
-        <div class="np-art"><div class="sleeve" data-sleeve="0"></div><span class="np-fmt">FLAC 24/96</span></div>
-        <div class="np-body">
-          <div class="np-title">Static Bloom</div>
-          <div class="np-artist">Neon Halcyon</div>
-          <div class="wave" data-wave><span class="head"></span></div>
-          <div class="times"><span>1:35</span><span>−2:37</span></div>
-          <div class="transport"><span class="g">◀◀</span><span class="play">❙❙</span><span class="g">▶▶</span></div>
-          <div class="acts"><span>Queue</span><span>Art</span><span>Studio</span><span>Tune</span></div>
-        </div>
-      </div>`,
+    mock: `<img class="shot" src="shots/nowplaying.jpg" alt="K7 — Now Playing" loading="lazy">`,
   },
   {
     label: "Files", accent: "#ffb020", sleeve: 1,
     head: "Your folders, exactly as you left them",
     body: "No import step and no reorganizing. Point K7 at a folder and it reads the tags and art as it goes. Wi-Fi transfer, AirDrop and Files all end up in the same tree.",
-    mock: `<div class="mock">
-        <div class="m-kick">LIBRARY</div>
-        <div class="m-title">Files</div>
-        <div class="m-sub">K7 plays the folder tree as it is. Nothing is copied or renamed.</div>
-        <div class="pills"><span class="on">Wi-Fi transfer</span><span>Files</span><span>AirDrop</span></div>
-        <div class="rows">
-          <div class="row">${tile("#ff2e93")}<div class="rt"><b>Weval</b><i>2 albums · 1.8 GB</i></div><span class="rn">26</span></div>
-          <div class="row sub"><span class="idx">01</span><div class="rt"><b>The Weight</b><i>FLAC · 24/96</i></div><span class="rn">4:46</span></div>
-          <div class="row sub"><span class="idx">02</span><div class="rt"><b>Roll Together</b><i>FLAC · 24/96</i></div><span class="rn">3:58</span></div>
-          <div class="row sub"><span class="idx">03</span><div class="rt"><b>Are You Even Real</b><i>FLAC · 24/96</i></div><span class="rn">5:12</span></div>
-          <div class="row">${tile("#ffb020")}<div class="rt"><b>Boards of Canada</b><i>4 albums · 3.4 GB</i></div><span class="rn">62</span></div>
-          <div class="row">${tile("#8b6bff")}<div class="rt"><b>Djrum</b><i>1 album · 2.1 GB</i></div><span class="rn">11</span></div>
-          <div class="row">${tile("#c8f542")}<div class="rt"><b>John Coltrane Quartet</b><i>3 albums · 940 MB</i></div><span class="rn">17</span></div>
-          <div class="row">${tile("#38e8ff")}<div class="rt"><b>Bootlegs &amp; Radio</b><i>147 files · 5.9 GB</i></div><span class="rn">147</span></div>
-        </div>
-      </div>`,
+    mock: `<img class="shot" src="shots/files.jpg" alt="K7 — Files" loading="lazy">`,
   },
   {
     label: "Artwork", accent: "#8b6bff", sleeve: 2,
     head: "Find the art your rip is missing",
     body: "Search MusicBrainz, the Cover Art Archive, Deezer and iTunes for covers, and add your own Discogs token for the pressings they miss. Compare them side by side, pick one, and K7 writes it into the file’s own tags so it stays with your music. Artist pictures fill themselves in as you browse.",
-    mock: `<div class="mock">
-        <div class="m-kick">ARTWORK</div>
-        <div class="m-title">Art search</div>
-        <div class="card" style="margin-top:12px">Weval — The Weight</div>
-        <div class="pills"><span class="on">MusicBrainz</span><span class="on">Cover Art Archive</span><span>Deezer</span><span>Discogs</span></div>
-        <div class="grid2">
-          <figure><div class="sq sel" data-sleeve="0"></div><figcaption>3000×3000 · Cover Art Archive</figcaption></figure>
-          <figure><div class="sq" data-sleeve="2"></div><figcaption>1400×1400 · MusicBrainz</figcaption></figure>
-          <figure><div class="sq" data-sleeve="4"></div><figcaption>1000×1000 · iTunes</figcaption></figure>
-          <figure><div class="sq" data-sleeve="5"></div><figcaption>600×600 · embedded</figcaption></figure>
-        </div>
-      </div>`,
+    mock: `<img class="shot" src="shots/artwork.jpg" alt="K7 — Artwork" loading="lazy">`,
   },
   {
     label: "Lyrics", accent: "#2ee6a8", sleeve: 5,
     head: "The words, when there are words to have",
     body: "An .lrc file next to a track wins, then whatever the file carries in its own tags, and only then does K7 look anything up — off by default, and it asks before the first request. Timed lyrics follow the music; a plain transcript says so rather than sitting still and looking broken.",
-    mock: `<div class="mock">
-        <div class="m-kick">NOW PLAYING</div>
-        <div class="m-title">The Weight</div>
-        <div class="m-sub">Weval — The Weight</div>
-        <div class="rows">
-          <div class="row"><div class="rt"><b style="opacity:.45">I can feel it coming</b></div></div>
-          <div class="row"><div class="rt"><b style="color:#2ee6a8">Hold the weight a while</b></div></div>
-          <div class="row"><div class="rt"><b style="opacity:.45">And let it go again</b></div></div>
-        </div>
-        <div class="pills" style="margin-top:12px"><span class="on">.lrc beside the track</span><span>In the file's tags</span><span>LRCLIB</span></div>
-      </div>`,
+    mock: `<img class="shot" src="shots/lyrics.jpg" alt="K7 — Lyrics" loading="lazy">`,
   },
   {
     label: "Studio", accent: "#c8f542", sleeve: 3,
     head: "Describe a playlist, get a playlist",
     body: "Type what you want to hear and K7 assembles it from the tracks on your phone, names the playlist, and says in a few words why each track is on it. Save it and it is a playlist like any other. Add your own Anthropic, OpenAI or Google key; only titles and tags are sent, and they go from your phone straight to your provider.",
-    mock: `<div class="mock">
-        <div class="m-kick">STUDIO</div>
-        <div class="m-title">Playlist</div>
-        <div class="card">Late night drive. Long instrumental builds, nothing with vocals up front, keep it under 100 BPM.
-          <div class="meta"><span>1,284 TRACKS IN SCOPE</span><span>~1.2K TOKENS</span></div>
-        </div>
-        <div class="rows">
-          <div class="row"><span class="idx">01</span><div class="rt"><b>An Eagle In Your Mind</b><i>slow build · no vocal</i></div><span class="rn">6:26</span></div>
-          <div class="row"><span class="idx">02</span><div class="rt"><b>A Tune for Us</b><i>sparse · long tail</i></div><span class="rn">5:53</span></div>
-          <div class="row"><span class="idx">03</span><div class="rt"><b>The Weight</b><i>92 BPM · instrumental</i></div><span class="rn">4:46</span></div>
-          <div class="row"><span class="idx">04</span><div class="rt"><b>Wise One</b><i>ballad tempo · modal</i></div><span class="rn">9:02</span></div>
-          <div class="row"><span class="idx">05</span><div class="rt"><b>Olha Maria</b><i>rubato · closes quiet</i></div><span class="rn">10:29</span></div>
-        </div>
-      </div>`,
+    mock: `<img class="shot" src="shots/studio.jpg" alt="K7 — Studio" loading="lazy">`,
   },
   {
     label: "Tune", accent: "#38e8ff", sleeve: 4,
     head: "A different EQ for every output",
     body: "Ten bands under three scales, gapless and ReplayGain. K7 keeps a curve for each output and switches with the hardware — headphones, the car, the speaker — so the one you set for your headphones is the one you get when you plug them in.",
-    mock: `<div class="mock">
-        <div class="m-kick">TUNE</div>
-        <div class="m-title">Headphones</div>
-        <div class="m-sub">Tap anywhere on a scale. This curve is the one your headphones get.</div>
-        <div style="margin-top:14px">
-          ${[["Low","+3.6 dB",13],["Mid","−1.2 dB",9],["High","+1.2 dB",11]]
-            .map(([n, v, at]) => `<div class="eqrow">
-              <div class="lab"><span>${n}</span><i style="color:#38e8ff">${v}</i></div>
-              <div class="ticks">${Array.from({length: 21}, (_, i) =>
-                `<i style="height:${i === at ? 20 : i % 5 === 0 ? 12 : 7}px;background:${
-                  i === at ? "#fff" : i < at ? "#38e8ff88" : "rgba(255,255,255,.14)"}"></i>`).join("")}</div>
-            </div>`).join("")}
-        </div>
-        <div class="pills"><span>Flat</span><span class="on">Tape</span><span>Vocal</span><span>Late night</span></div>
-      </div>`,
+    mock: `<img class="shot" src="shots/tune.jpg" alt="K7 — Tune" loading="lazy">`,
   },
 ];
 

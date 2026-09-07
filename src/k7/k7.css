@@ -308,6 +308,7 @@ h1 {
 }
 
 /* Generic mock furniture, shared by the feature phones. */
+.shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .mock { position: absolute; inset: 0; padding: 56px 20px 26px; display: flex; flex-direction: column; }
 .mock .m-kick { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.18em; color: var(--t3); }
 .mock .m-title { font-size: 32px; line-height: 0.98; letter-spacing: -0.045em; margin-top: 6px; }
@@ -588,4 +589,18 @@ footer h2 { font-size: 64px; letter-spacing: -0.05em; }
   html { scroll-behavior: auto; }
   .marquee ul { animation: none; }
   .dot { animation: none; opacity: 1; }
+}
+
+/* The widgets, on the page's own ground rather than in a phone frame — they are cut to
+   their corner radius, so a frame around them would be a second border. */
+.widgets { padding: 96px 0; border-top: 1px solid var(--hair); }
+.widgets .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.widgets h2 { font-size: 40px; line-height: 1.02; letter-spacing: -0.04em; margin: 10px 0 14px; }
+.widgets p { color: var(--t2); font-size: 13.5px; line-height: 1.65; max-width: 42ch; }
+.w-shots { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.w-shots img { display: block; width: 100%; max-width: 400px; height: auto; filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.5)); }
+.w-shots img:last-child { max-width: 190px; }
+@media (max-width: 780px) {
+  .widgets .wrap { grid-template-columns: 1fr; gap: 28px; }
+  .widgets h2 { font-size: 30px; }
 }
