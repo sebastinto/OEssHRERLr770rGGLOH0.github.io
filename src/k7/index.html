@@ -64,8 +64,8 @@
             <span class="np-fmt">FLAC 24/96</span>
           </div>
           <div class="np-body">
-            <div class="np-title">Static Bloom</div>
-            <div class="np-artist">Neon Halcyon</div>
+            <div class="np-title">The Weight</div>
+            <div class="np-artist">Weval</div>
             <div class="wave" data-wave><span class="head"></span></div>
             <div class="times"><span>1:35</span><span>−2:37</span></div>
             <div class="transport">
@@ -186,16 +186,22 @@
 </footer>
 
 <script>
-// Six placeholder sleeves, built from gradients. Real cover art replaces these before launch.
+// Real covers, in the order the sections use them. The gradients that stood here were
+// always meant to be replaced; a page about album art showing invented album art was the
+// one thing on it that could not be true.
 const SLEEVES = [
-  ["#ff2e93", "#4a1730"], ["#ffb020", "#5a2a00"], ["#8b6bff", "#241a4a"],
-  ["#c8f542", "#2a3a08"], ["#38e8ff", "#062a34"], ["#ff5a1f", "#3a1206"],
+  "hero",      // Weval — The Weight
+  "foxlake",   // Fox Lake — New World Heat
+  "boc",       // Boards of Canada — Music Has the Right to Children
+  "djrum",     // Djrum — Under Tangled Silence
+  "coltrane",  // John Coltrane Quartet — Crescent
+  "wendel",    // Ben Wendel — BaRcoDe
 ];
 function paintSleeve(el, i) {
-  const [a, b] = SLEEVES[i % SLEEVES.length];
-  el.style.background =
-    `radial-gradient(120% 90% at 22% 14%, ${a}cc, transparent 62%),` +
-    `linear-gradient(155deg, ${b}, #08070a 78%)`;
+  const key = SLEEVES[i % SLEEVES.length];
+  el.style.backgroundImage = `url("covers/${key}.jpg")`;
+  el.style.backgroundSize = "cover";
+  el.style.backgroundPosition = "center";
 }
 document.querySelectorAll("[data-sleeve]").forEach(el => paintSleeve(el, +el.dataset.sleeve));
 
@@ -261,10 +267,13 @@ const BEATS = [
         <div class="m-sub">K7 plays the folder tree as it is. Nothing is copied or renamed.</div>
         <div class="pills"><span class="on">Wi-Fi transfer</span><span>Files</span><span>AirDrop</span></div>
         <div class="rows">
-          <div class="row">${tile("#ff2e93")}<div class="rt"><b>Neon Halcyon</b><i>2 albums · 1.8 GB</i></div><span class="rn">19</span></div>
-          <div class="row">${tile("#ffb020")}<div class="rt"><b>Kōhaku</b><i>4 albums · 3.4 GB</i></div><span class="rn">41</span></div>
-          <div class="row">${tile("#8b6bff")}<div class="rt"><b>The Ember Field</b><i>1 album · 2.1 GB</i></div><span class="rn">11</span></div>
-          <div class="row">${tile("#c8f542")}<div class="rt"><b>Vasa</b><i>3 albums · 940 MB</i></div><span class="rn">28</span></div>
+          <div class="row">${tile("#ff2e93")}<div class="rt"><b>Weval</b><i>2 albums · 1.8 GB</i></div><span class="rn">26</span></div>
+          <div class="row sub"><span class="idx">01</span><div class="rt"><b>The Weight</b><i>FLAC · 24/96</i></div><span class="rn">4:46</span></div>
+          <div class="row sub"><span class="idx">02</span><div class="rt"><b>Roll Together</b><i>FLAC · 24/96</i></div><span class="rn">3:58</span></div>
+          <div class="row sub"><span class="idx">03</span><div class="rt"><b>Are You Even Real</b><i>FLAC · 24/96</i></div><span class="rn">5:12</span></div>
+          <div class="row">${tile("#ffb020")}<div class="rt"><b>Boards of Canada</b><i>4 albums · 3.4 GB</i></div><span class="rn">62</span></div>
+          <div class="row">${tile("#8b6bff")}<div class="rt"><b>Djrum</b><i>1 album · 2.1 GB</i></div><span class="rn">11</span></div>
+          <div class="row">${tile("#c8f542")}<div class="rt"><b>John Coltrane Quartet</b><i>3 albums · 940 MB</i></div><span class="rn">17</span></div>
           <div class="row">${tile("#38e8ff")}<div class="rt"><b>Bootlegs &amp; Radio</b><i>147 files · 5.9 GB</i></div><span class="rn">147</span></div>
         </div>
       </div>`,
@@ -276,7 +285,7 @@ const BEATS = [
     mock: `<div class="mock">
         <div class="m-kick">ARTWORK</div>
         <div class="m-title">Art search</div>
-        <div class="card" style="margin-top:12px">Neon Halcyon — Static Bloom</div>
+        <div class="card" style="margin-top:12px">Weval — The Weight</div>
         <div class="pills"><span class="on">MusicBrainz</span><span class="on">Cover Art Archive</span><span>Deezer</span><span>Discogs</span></div>
         <div class="grid2">
           <figure><div class="sq sel" data-sleeve="0"></div><figcaption>3000×3000 · Cover Art Archive</figcaption></figure>
