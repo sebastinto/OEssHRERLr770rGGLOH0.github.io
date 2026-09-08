@@ -162,18 +162,19 @@ h3 { font-size: 20px; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01em;
 .plat b { display: block; font-size: 16px; }
 .plat span { color: var(--ink3); font-size: 14px; }
 
-/* ---------------------------------------------------------------- faq */
+/* ---------------------------------------------------------------- questions */
 
-.faq { margin-top: 30px; border-top: 1px solid var(--hair); }
-.faq details { border-bottom: 1px solid var(--hair); }
-.faq summary {
-  cursor: pointer; list-style: none; padding: 22px 0;
-  font-size: 18px; font-weight: 500; display: flex; justify-content: space-between; gap: 20px;
+/* A grid of short answers rather than an accordion. Every answer here is two sentences, and
+   hiding two sentences behind a disclosure asks for a click to save nothing. */
+.qa {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 34px 46px; margin-top: 44px;
 }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; color: var(--accent); font-weight: 400; }
-.faq details[open] summary::after { content: "–"; }
-.faq .a { color: var(--ink2); padding: 0 0 24px; max-width: 62ch; }
+.qa h3 { margin-bottom: 10px; }
+.qa h3::before {
+  content: ""; display: block; width: 24px; height: 2px;
+  background: var(--accent); margin-bottom: 14px; border-radius: 2px;
+}
 
 /* ---------------------------------------------------------------- footer */
 
@@ -194,7 +195,7 @@ footer h2 { margin-bottom: 40px; }
   .hero { padding-top: 54px; }
   .hero .wrap, .split { grid-template-columns: 1fr; gap: 40px; }
   .split.flip > :first-child { order: 0; }
-  .three, .plats { grid-template-columns: 1fr; }
+  .three, .plats, .qa { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   section { padding: 68px 0; }
 }
