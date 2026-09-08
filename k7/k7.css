@@ -481,7 +481,10 @@ h2 { margin: 14px 0 0; font-size: 56px; font-weight: 700; line-height: 0.98; let
 .beat:hover b { color: rgba(255, 255, 255, 0.7); }
 
 /* ------------------------------------------------------------------ price */
-.price .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+/* Top-aligned, not centred like the other two-column bands: the panel is the tallest
+   thing on the page, and anything else drops the heading into the middle of a list it
+   is meant to introduce. */
+.price .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
 .panel {
   padding: 34px;
   border-radius: 22px;
