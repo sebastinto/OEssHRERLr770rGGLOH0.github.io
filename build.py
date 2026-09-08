@@ -120,6 +120,13 @@ def build_index():
          ("&#9733; Featured on Android Police &#9733;", "https://www.androidpolice.com/2021/04/24/12-new-and-notable-android-apps-and-live-wallpapers-from-the-last-three-weeks-including-weatherback-wallpaper-microsoft-edge-canary-and-sketch-360-4-3-21-4-24-21/#time-rise")],
         "android_timerise.png",
         [(GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.timerise&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")])
+    bourdon = project(
+        "Bourdon",
+        ["Drone and chord reference", "For practising intonation against"],
+        [],
+        "bourdon_hero.webp",
+        [("coming_soon_badge.png", "", "Coming soon to the App Store")],
+        note="(iPhone, iPad and Mac)")
     lake = project(
         "Lake &amp; Coast",
         ["Pontchartrain Conservancy Water Quality Program"],
@@ -128,7 +135,7 @@ def build_index():
         [(APP_STORE_IMG, "https://apps.apple.com/us/app/lake-and-coast/id1559404216?itsct=apps_box_badge&itscg=30200", "Download on the App Store"),
          (GP, "https://play.google.com/store/apps/details?id=org.scienceforourcoast.lakeandcoastnew", "Get it on Google Play")],
         note="(Maintained by Pontchartrain Conservancy)")
-    main = '<div class="container">\n' + sunny + dotscape + depths + timerise + lake + "\n</div>"
+    main = '<div class="container">\n' + sunny + bourdon + dotscape + depths + timerise + lake + "\n</div>"
     write("index.html", page("Tobiano Apps", "Home of Tobiano Apps.", main))
 
 # ---------------------------------------------------------------- FAQ page
@@ -305,7 +312,7 @@ LEGAL = [
 # palette — nothing like the shell every other page here shares. Rather than rebuild it out
 # of f-strings, build.py copies it through untouched, so this stays the one command that
 # produces the whole site.
-STATIC = [("src/k7", "k7")]
+STATIC = [("src/k7", "k7"), ("src/bourdon", "bourdon")]
 
 def build_static():
     for src, dest in STATIC:

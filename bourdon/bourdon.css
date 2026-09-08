@@ -1,0 +1,200 @@
+/* Bourdon — marketing page.
+   Palette lifted from the app's own tokens so the page and the product agree. */
+
+:root {
+  --canvas:  #0b0c0d;
+  --surface: #14161a;
+  --raised:  #1e2126;
+  --control: #2a2e35;
+  --accent:  #f5a93f;
+  --on-accent: #17130b;
+  --ink:     #f2f0ec;
+  --ink2:    #a3a7ae;
+  --ink3:    #6e737c;
+  --hair:    rgba(255,255,255,.07);
+  --wrap:    1180px;
+  --sans: "Instrument Sans", ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
+
+/* Musical glyphs — ♯ ♭ △ ø ° — are missing from most webfonts, so anything that sets a
+   chord symbol falls back to the system face, which has them. Same problem the app had
+   and the same answer: never let a symbol split across two faces mid-word. */
+.chord {
+  font-family: ui-sans-serif, -apple-system, "Segoe UI Symbol", "Helvetica Neue", Arial, sans-serif;
+  font-feature-settings: "tnum";
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------- nav */
+
+.nav {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(11,12,13,.82);
+  backdrop-filter: saturate(140%) blur(14px);
+  border-bottom: 1px solid var(--hair);
+}
+.nav .wrap { display: flex; align-items: center; gap: 18px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 600; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+.nav-spacer { flex: 1; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a {
+  text-decoration: none; color: var(--ink2); font-size: 15px;
+}
+.nav-links a:hover { color: var(--ink); }
+.soon-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 500 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(245,169,63,.34);
+  border-radius: 999px; padding: 8px 13px;
+}
+.dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+  box-shadow: 0 0 0 0 rgba(245,169,63,.5);
+  animation: pulse 2.6s ease-out infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(245,169,63,.45); }
+  70%  { box-shadow: 0 0 0 7px rgba(245,169,63,0); }
+  100% { box-shadow: 0 0 0 0 rgba(245,169,63,0); }
+}
+@media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+
+/* ---------------------------------------------------------------- hero */
+
+.hero { padding: 86px 0 40px; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.badge {
+  display: inline-flex; align-items: center; gap: 9px;
+  font: 500 12px/1 var(--mono); letter-spacing: .1em;
+  color: var(--ink2); margin-bottom: 26px;
+}
+h1 {
+  font-size: clamp(44px, 6.2vw, 76px);
+  line-height: 1.02; letter-spacing: -.03em; font-weight: 600;
+  margin: 0 0 22px; text-wrap: balance;
+}
+.amber { color: var(--accent); }
+.lede { font-size: 19px; color: var(--ink2); margin: 0 0 30px; max-width: 34em; }
+.cta-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.cta {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: var(--accent); color: var(--on-accent);
+  font-weight: 600; padding: 14px 22px; border-radius: 12px;
+}
+.cta-note { font: 400 14px/1.45 var(--sans); color: var(--ink3); }
+
+.stats { display: flex; gap: 34px; margin-top: 40px; flex-wrap: wrap; }
+.stat b { display: block; font: 500 26px/1 var(--mono); color: var(--ink); }
+.stat span {
+  display: block; margin-top: 7px;
+  font: 500 11px/1 var(--mono); letter-spacing: .12em; color: var(--ink3);
+}
+
+.shot { border-radius: 14px; border: 1px solid var(--hair); }
+.hero-shot {
+  border-radius: 16px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.09);
+  box-shadow: 0 40px 90px -30px rgba(0,0,0,.9);
+}
+
+/* ---------------------------------------------------------------- sections */
+
+section { padding: 92px 0; border-top: 1px solid var(--hair); }
+.kicker {
+  font: 500 12px/1 var(--mono); letter-spacing: .14em;
+  color: var(--accent); margin-bottom: 16px;
+}
+h2 {
+  font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1;
+  letter-spacing: -.02em; font-weight: 600; margin: 0 0 18px; text-wrap: balance;
+}
+h3 { font-size: 20px; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01em; }
+.body { color: var(--ink2); margin: 0; }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.split.flip > :first-child { order: 2; }
+
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 44px; }
+.card { background: var(--surface); border: 1px solid var(--hair); border-radius: 14px; padding: 26px; }
+.card .n { font: 500 12px/1 var(--mono); color: var(--accent); letter-spacing: .1em; margin-bottom: 14px; }
+
+/* ---------------------------------------------------------------- vocabulary */
+
+.vocab { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+.vocab span {
+  background: var(--raised); border: 1px solid var(--hair);
+  border-radius: 8px; padding: 13px 17px; font-size: 19px; font-weight: 500;
+}
+.vocab span.on { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+.vocab sup {
+  font-size: .58em; vertical-align: baseline; position: relative; top: -.08em;
+  margin-left: .06em; font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- platforms */
+
+.plats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 40px; }
+.plat { text-align: center; }
+.plat img { border-radius: 12px; border: 1px solid var(--hair); margin: 0 auto 18px; }
+.plat b { display: block; font-size: 16px; }
+.plat span { color: var(--ink3); font-size: 14px; }
+
+/* ---------------------------------------------------------------- faq */
+
+.faq { margin-top: 30px; border-top: 1px solid var(--hair); }
+.faq details { border-bottom: 1px solid var(--hair); }
+.faq summary {
+  cursor: pointer; list-style: none; padding: 22px 0;
+  font-size: 18px; font-weight: 500; display: flex; justify-content: space-between; gap: 20px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--accent); font-weight: 400; }
+.faq details[open] summary::after { content: "–"; }
+.faq .a { color: var(--ink2); padding: 0 0 24px; max-width: 62ch; }
+
+/* ---------------------------------------------------------------- footer */
+
+footer { border-top: 1px solid var(--hair); padding: 78px 0 56px; }
+footer h2 { margin-bottom: 40px; }
+.colophon {
+  display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  padding-top: 26px; border-top: 1px solid var(--hair);
+}
+.colophon .id { font: 500 12px/1.6 var(--mono); letter-spacing: .08em; color: var(--ink3); }
+.colophon nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.colophon a { color: var(--ink3); text-decoration: none; font-size: 14px; }
+.colophon a:hover { color: var(--ink); }
+
+/* ---------------------------------------------------------------- narrow */
+
+@media (max-width: 900px) {
+  .hero { padding-top: 54px; }
+  .hero .wrap, .split { grid-template-columns: 1fr; gap: 40px; }
+  .split.flip > :first-child { order: 0; }
+  .three, .plats { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  section { padding: 68px 0; }
+}
