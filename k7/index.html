@@ -45,7 +45,7 @@
         <span class="cta-note">One purchase.<br>No subscription, ever.</span>
       </div>
       <div class="stats">
-        <div class="stat"><b>14</b><span>FORMATS</span></div>
+        <div class="stat"><b>9</b><span>FORMATS</span></div>
         <div class="stat"><b>24/192</b><span>HI-RES OUT</span></div>
         <div class="stat"><b>0</b><span>TRACKERS</span></div>
       </div>
@@ -105,10 +105,10 @@
     <div class="panel">
       <div class="head"><b>One purchase</b><span>NO SUBSCRIPTION</span></div>
       <ul>
-        <li>Fourteen audio formats, up to 24-bit / 192 kHz</li>
+        <li>Nine audio formats, up to 24-bit / 192 kHz</li>
         <li>10-band EQ, with a curve remembered per output</li>
         <li>Gapless playback and ReplayGain</li>
-        <li>Folder browser, Wi-Fi transfer and AirDrop import</li>
+        <li>Folder browser, Wi-Fi transfer and Files import</li>
         <li>Playlists, favourites and a ban list, kept on device</li>
         <li>Lyrics from your files, or looked up if you ask</li>
         <li>Home screen widgets with transport, Shortcuts and lock screen art</li>
@@ -127,11 +127,11 @@
     <div class="faq">
       <details open>
         <summary>How do I get my music onto the iPhone?</summary>
-        <div class="a">Three ways. Open the Wi-Fi transfer screen and drag a folder from your Mac in the browser, AirDrop an album straight into K7, or pick any folder already sitting in Files. Tags, artwork and folder structure are read on the way in.</div>
+        <div class="a">Two ways. Open the Wi-Fi transfer screen and drag a folder from your Mac in the browser, or point K7 at any folder already on the phone — including anything you AirDropped or downloaded into Files earlier. Wi-Fi transfer is the one to use for an album: AirDrop sends loose files, so the folder and the cover sitting next to the music do not survive the trip. Tags, artwork and folder structure are read on the way in.</div>
       </details>
       <details>
         <summary>Which formats does it play?</summary>
-        <div class="a">FLAC, ALAC, MP3, AAC, M4A, WAV, AIFF, OGG, Opus, DSF, DFF, MPC, TTA and WavPack — fourteen in all, up to 24-bit / 192 kHz output. WMA, APE and AC3 are not included, for patent and licensing reasons rather than technical ones. Broken or partially tagged files still play; K7 falls back to the filename. Files with old FairPlay DRM are recognized and explained rather than silently skipped.</div>
+        <div class="a">FLAC, ALAC, MP3, AAC, M4A, WAV, AIFF, OGG Vorbis and Opus — nine in all, up to 24-bit / 192 kHz output. DSD, WavPack, Musepack and True Audio are not played: each needs a decoder K7 does not ship, and rather than let those files in and fail them at the press of a play button, K7 names them on the skipped list when you import. WMA, APE and AC3 are absent for patent and licensing reasons. Broken or partially tagged files still play; K7 falls back to the filename. Files with old FairPlay DRM are recognized and explained rather than silently skipped.</div>
       </details>
       <details>
         <summary>Does it touch my Apple Music library?</summary>
@@ -211,8 +211,8 @@ function paintWave(el) {
 }
 document.querySelectorAll("[data-wave]").forEach(paintWave);
 
-const FORMATS = ["FLAC","ALAC","MP3","AAC","M4A","WAV","AIFF","OGG","OPUS","DSF","DFF","MPC","TTA","WV"];
-const HI = new Set(["FLAC","ALAC","DSF","OPUS"]);
+const FORMATS = ["FLAC","ALAC","MP3","AAC","M4A","WAV","AIFF","OGG","OPUS"];
+const HI = new Set(["FLAC","ALAC","OPUS"]);
 const mq = document.getElementById("marquee");
 // Duplicated so the -50% loop is seamless.
 for (let pass = 0; pass < 2; pass++) {
