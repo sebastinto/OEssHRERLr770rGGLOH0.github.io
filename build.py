@@ -129,7 +129,7 @@ def build_index():
         [(GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.timerise&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")])
     bourdon = project(
         "Bourdon",
-        ["Drone and chord reference", "For practising intonation against"],
+        ["Drone and chord reference"],
         [],
         "bourdon_hero.webp",
         [("coming_soon_badge.png", "", "Coming soon to the App Store")],
@@ -137,7 +137,7 @@ def build_index():
         url="/bourdon/")
     k7 = project(
         "K7",
-        ["Local music player", "Your own files, gapless, with a real EQ"],
+        ["Local music player"],
         [],
         "k7_hero.webp",
         [("coming_soon_badge.png", "", "Coming soon to the App Store")],
