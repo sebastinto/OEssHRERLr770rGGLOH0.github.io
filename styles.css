@@ -101,6 +101,10 @@ html.dark .theme-switch .fa-moon { display: inline; }
   border-radius: 8px;
 }
 .project h2 { font-size: 2.9rem; font-weight: bold; margin: 0 0 0.5rem; }
+/* A title that leads somewhere says so on hover and nowhere else: the heading is
+   the same size and weight as the ones that do not, so the row still scans. */
+.project-link { color: inherit; text-decoration: none; }
+.project-link:hover { text-decoration: underline; text-underline-offset: 6px; }
 .project .subtitle { font-size: 1.1rem; margin: 0.15rem 0; }
 .project .status { font-size: 0.95rem; font-style: italic; font-weight: 300; color: var(--muted); margin: 1rem 0 0; }
 .project .features { margin: 1rem 0; }

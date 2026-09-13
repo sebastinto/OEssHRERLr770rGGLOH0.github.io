@@ -66,7 +66,11 @@ def write(rel, content):
 GP = "google_play_badge.png"
 APP_STORE_IMG = "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&releaseDate=1276560000&h=fbdb5b4ea9418f75555a911d01d7610e"
 
-def project(title, subtitles, features, img, badges, note=None):
+def project(title, subtitles, features, img, badges, note=None, url=None):
+    # `url` links the title and the image at its own page. Both /k7 and /bourdon were
+    # built, deployed and reachable by typing the address and by nothing else — a finished
+    # page that the site it belongs to never points at.
+    heading = f'<a class="project-link" href="{esc_attr(url)}">{title}</a>' if url else title
     subs = "".join(f'<p class="subtitle">{s}</p>' for s in subtitles)
     feats = "".join(
         f'<a href="{esc_attr(u)}" target="_blank" rel="noopener">{t}</a>' for t, u in features)
@@ -78,15 +82,18 @@ def project(title, subtitles, features, img, badges, note=None):
         # A badge with no URL (e.g. "coming soon") renders as a plain image, not a dead link.
         return f'<a href="{esc_attr(u)}" target="_blank" rel="noopener">{img}</a>' if u else img
     bs = "".join(badge(src, u, alt) for src, u, alt in badges)
+    image = f'<img src="{img}" alt="{title}">'
+    if url:
+        image = f'<a href="{esc_attr(url)}">{image}</a>'
     return f"""<section class="project">
   <div class="project-text">
-    <h2>{title}</h2>
+    <h2>{heading}</h2>
     {subs}
     {feats_html}
     {note_html}
     <div class="badges">{bs}</div>
   </div>
-  <div class="project-image"><img src="{img}" alt="{title}"></div>
+  <div class="project-image">{image}</div>
 </section>"""
 
 def build_index():
@@ -126,7 +133,16 @@ def build_index():
         [],
         "bourdon_hero.webp",
         [("coming_soon_badge.png", "", "Coming soon to the App Store")],
-        note="(iPhone, iPad and Mac)")
+        note="(iPhone, iPad and Mac)",
+        url="/bourdon/")
+    k7 = project(
+        "K7",
+        ["Local music player", "Your own files, gapless, with a real EQ"],
+        [],
+        "k7_hero.webp",
+        [("coming_soon_badge.png", "", "Coming soon to the App Store")],
+        note="(iPhone and iPad)",
+        url="/k7/")
     lake = project(
         "Lake &amp; Coast",
         ["Pontchartrain Conservancy Water Quality Program"],
@@ -135,7 +151,12 @@ def build_index():
         [(APP_STORE_IMG, "https://apps.apple.com/us/app/lake-and-coast/id1559404216?itsct=apps_box_badge&itscg=30200", "Download on the App Store"),
          (GP, "https://play.google.com/store/apps/details?id=org.scienceforourcoast.lakeandcoastnew", "Get it on Google Play")],
         note="(Maintained by Pontchartrain Conservancy)")
-    main = '<div class="container">\n' + sunny + bourdon + dotscape + depths + timerise + lake + "\n</div>"
+    # Shipping apps first, then what is only announced. Bourdon sat second, above three
+    # apps somebody could have downloaded that minute — a coming-soon entry costs the
+    # things below it their place, and it is the one entry nobody can act on.
+    shipping = sunny + dotscape + depths + timerise + lake
+    announced = k7 + bourdon
+    main = '<div class="container">\n' + shipping + announced + "\n</div>"
     write("index.html", page("Tobiano Apps", "Home of Tobiano Apps.", main))
 
 # ---------------------------------------------------------------- FAQ page
