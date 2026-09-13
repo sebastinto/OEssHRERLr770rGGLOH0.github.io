@@ -127,14 +127,6 @@ def build_index():
          ("&#9733; Featured on Android Police &#9733;", "https://www.androidpolice.com/2021/04/24/12-new-and-notable-android-apps-and-live-wallpapers-from-the-last-three-weeks-including-weatherback-wallpaper-microsoft-edge-canary-and-sketch-360-4-3-21-4-24-21/#time-rise")],
         "android_timerise.png",
         [(GP, "https://play.google.com/store/apps/details?id=com.tobianoapps.timerise&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", "Get it on Google Play")])
-    cutup = project(
-        "Cutup",
-        ["Capture and practice, in one app", "Loop a phrase, slow it down, save the splice"],
-        [],
-        "cutup_hero.webp",
-        [("coming_soon_badge.png", "", "Coming soon to the App Store")],
-        note="(iPhone, iPad and Mac)",
-        url="/cutup/")
     lake = project(
         "Lake &amp; Coast",
         ["Pontchartrain Conservancy Water Quality Program"],
@@ -148,8 +140,7 @@ def build_index():
     # it their place while being the one entry nobody can do anything with, so
     # they are reachable by link and not listed here.
     shipping = sunny + dotscape + depths + timerise + lake
-    announced = cutup
-    main = '<div class="container">\n' + shipping + announced + "\n</div>"
+    main = '<div class="container">\n' + shipping + "\n</div>"
     write("index.html", page("Tobiano Apps", "Home of Tobiano Apps.", main))
 
 # ---------------------------------------------------------------- FAQ page
