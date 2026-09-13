@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cutup — Capture and practice, for iPhone, iPad and Mac</title>
+<meta name="description" content="One inbox for the notes, photos, sketches and voice memos you make while practising — and a transport that loops a phrase, slows it down and saves it. The saved loop is a splice. One purchase, no subscription.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/cutup/cutup-icon.png">
+<meta property="og:title" content="Cutup — Capture and practice">
+<meta property="og:description" content="Catch the idea. Loop the phrase. Slow it down until it is yours.">
+<meta property="og:image" content="https://www.tobianoapps.com/cutup/cutup-icon.png">
+<meta property="og:url" content="https://www.tobianoapps.com/cutup">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/cutup/cutup.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/cutup/">
+      <img src="/cutup/cutup-icon.png" alt="">
+      <span>Cutup</span>
+    </a>
+    <div class="nav-spacer"></div>
+    <nav class="nav-links">
+      <a href="#capture">Capture</a>
+      <a href="#practice">Practice</a>
+      <a href="#appearance">Light &amp; dark</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <span class="soon-pill"><span class="dot"></span>Coming Soon</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap split">
+    <div class="split-text">
+      <p class="eyebrow">iPhone · iPad · Mac</p>
+      <h1>Catch it now.<br>Work it out later.</h1>
+      <p class="lede">Catch the idea in one tap. Loop the four bars you cannot play
+        yet, and slow them down until you can.</p>
+      <div class="cta-row">
+        <span class="cta">Coming Soon</span>
+        <span class="cta-note">One purchase.<br>No subscription, ever.</span>
+      </div>
+    </div>
+    <div class="shot hero-shot">
+      <img src="/cutup/shots/inbox-light.webp" width="1206" height="2622"
+           alt="The Cutup inbox, showing notes, a splice, voice memos, a sketch and a photo, each tagged.">
+    </div>
+  </div>
+</section>
+
+<section id="capture">
+  <div class="wrap split">
+    <div class="split-text">
+      <p class="eyebrow">Capture</p>
+      <h2>One inbox, four ways in</h2>
+      <p class="body">Notes, photos, sketches, voice memos. One list, newest first,
+        searchable whether or not you tag anything.</p>
+      <ul class="points">
+        <li><span class="n">01</span><div><b>One tap from anywhere</b>
+          <p>On every screen, opening on the kind you used last.</p></div></li>
+        <li><span class="n">02</span><div><b>Pin this week's idea</b>
+          <p>It stays at the top until you unpin it.</p></div></li>
+        <li><span class="n">03</span><div><b>Splices land here too</b>
+          <p>A saved loop is a row like any other.</p></div></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <img src="/cutup/shots/inbox-dark.webp" width="1206" height="2622"
+           alt="The same inbox in dark mode.">
+    </div>
+  </div>
+</section>
+
+<section id="practice">
+  <div class="wrap split flip">
+    <div class="split-text">
+      <p class="eyebrow">Practice</p>
+      <h2>Loop it. Slow it.<br>Save it as a splice.</h2>
+      <p class="body">Drag A and B around the phrase. Drop to half speed with the pitch
+        held. Save it — that is a splice, and it goes back to the inbox.</p>
+      <ul class="points">
+        <li><span class="n">01</span><div><b>Speed and pitch, separately</b>
+          <p>Pitch locked by default. Movable on its own to transpose.</p></div></li>
+        <li><span class="n">02</span><div><b>Ends placed exactly</b>
+          <p>Nudge A and B a frame at a time. Four zoom levels.</p></div></li>
+        <li><span class="n">03</span><div><b>Mark what you return to</b>
+          <p>Come back without hunting for the bar.</p></div></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <img src="/cutup/shots/transport-light.webp" width="1206" height="2622"
+           alt="The Cutup transport: a waveform with A and B loop handles, speed at 100%, pitch locked, and a Save Splice button.">
+    </div>
+  </div>
+</section>
+
+<section id="appearance">
+  <div class="wrap">
+    <div style="text-align:center; max-width:44rem; margin:0 auto 40px;">
+      <p class="eyebrow">Appearance</p>
+      <h2>Light and dark</h2>
+      <p class="body" style="margin:0 auto;">Light is its own design, not an inverted
+        dark. Drag to compare.</p>
+    </div>
+
+    <div class="themer">
+      <!-- Dark underneath, light clipped over the top. Both images are the same screen at
+           the same size, so the seam falls on the same row wherever it is dragged. -->
+      <div class="themer-frame">
+        <img src="/cutup/shots/transport-dark.webp" width="1206" height="2622"
+             alt="The transport in dark mode.">
+        <div class="themer-top" id="themerTop" style="clip-path:inset(0 50% 0 0)">
+          <img src="/cutup/shots/transport-light.webp" width="1206" height="2622"
+               alt="The same transport in light mode.">
+        </div>
+        <div class="themer-handle" id="themerHandle" style="left:50%"></div>
+      </div>
+      <!-- A range input, not a drag handler: it is keyboard operable, it announces itself
+           to a screen reader, and it works before any script runs. -->
+      <input class="themer-range" id="themerRange" type="range" min="0" max="100" value="50"
+             aria-label="Reveal light or dark mode">
+      <div class="themer-labels"><span>Light</span><span>Dark</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="everywhere">
+  <div class="wrap">
+    <p class="eyebrow">Everywhere you practise</p>
+    <h2>One app, three shapes</h2>
+    <div class="devices">
+      <div class="device"><h3>iPhone</h3><p>At the session, for what you would forget.</p></div>
+      <div class="device"><h3>iPad</h3><p>On the stand, waveform wide enough to cut by eye.</p></div>
+      <div class="device"><h3>Mac</h3><p>Where the transcribing happens.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Good to know</h2>
+    <div class="faq">
+      <div>
+        <h3>What does it cost?</h3>
+        <p class="body">One purchase, priced at launch. No subscription, no tiers.</p>
+      </div>
+      <div>
+        <h3>What audio can I use?</h3>
+        <p class="body">Audio files you already have. Cutup does not stream and does
+          not connect to a music service.</p>
+      </div>
+      <div>
+        <h3>What is a splice?</h3>
+        <p class="body">A saved loop — start, end, speed, pitch. Opening one puts you
+          back exactly where you were.</p>
+      </div>
+      <div>
+        <h3>Where does my work live?</h3>
+        <p class="body">On your device, and in your own iCloud if you turn sync on.
+          There is no Cutup account and no server of ours.</p>
+      </div>
+      <div>
+        <h3>Can I get it all out?</h3>
+        <p class="body">Settings → Backup → Export writes a dated zip — to Files,
+          iCloud Drive, AirDrop, anywhere. Your tracks can travel with it or stay out
+          of it, per export.</p>
+      </div>
+      <div>
+        <h3>What happens when I import an archive?</h3>
+        <p class="body">It merges. Rows are matched on what they are, so importing the
+          same archive twice changes nothing and importing into a library with work in
+          it adds to it.</p>
+      </div>
+      <div>
+        <h3>I have been using it on Android.</h3>
+        <p class="body">Both apps write the same archive. Export there, import here,
+          and relink any tracks that did not travel.</p>
+      </div>
+      <div>
+        <h3>Why "Cutup"?</h3>
+        <p class="body">The tape technique: cut the phrase out, play it back, play it
+          back again. Which is what practising four hard bars is.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Catch the idea.<br>Then <span class="amber">work it out.</span></h2>
+    <div class="colophon">
+      <span class="id">CUTUP · CAPTURE &amp; PRACTICE</span>
+      <nav>
+        <a href="#capture">Capture</a>
+        <a href="#practice">Practice</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:contact@tobianoapps.com">Contact</a>
+        <a href="/">Tobiano Apps</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Progressive enhancement: without this the slider still sits at 50% and both halves are
+// visible, which is the point of the module rather than a broken version of it.
+(function () {
+  var range = document.getElementById('themerRange');
+  var top = document.getElementById('themerTop');
+  var handle = document.getElementById('themerHandle');
+  if (!range || !top || !handle) return;
+  function apply() {
+    // Clip from the right by the remainder, so the left of the overlay stays pinned to the
+    // left of the image underneath it however far the slider has travelled.
+    top.style.clipPath = 'inset(0 ' + (100 - range.value) + '% 0 0)';
+    handle.style.left = range.value + '%';
+  }
+  range.addEventListener('input', apply);
+  apply();
+})();
+</script>
+
+</body>
+</html>
