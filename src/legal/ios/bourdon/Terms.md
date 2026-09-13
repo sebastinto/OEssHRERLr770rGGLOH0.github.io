@@ -9,11 +9,11 @@ By downloading or using the app, these terms will automatically apply to you –
 
 [Tobiano Apps](https://www.tobianoapps.com/) is committed to ensuring that the app is as useful and efficient as possible. For that reason, we reserve the right to make changes to the app or to charge for its services, at any time and for any reason. We will never charge you for the app or its services without making it very clear to you exactly what you’re paying for.
 
-Bourdon keeps your settings on your device and works entirely offline. It’s your responsibility to keep your device and access to the app secure. We therefore recommend that you do not jailbreak your device, which is the process of removing software restrictions and limitations imposed by the official operating system of your device. It could make your device vulnerable to malware/viruses/malicious programs, compromise your device’s security features and it could mean that the Bourdon app won’t work properly or at all.
+Bourdon keeps your settings on your device and works offline, apart from the crash reports described below. It’s your responsibility to keep your device and access to the app secure. We therefore recommend that you do not jailbreak your device, which is the process of removing software restrictions and limitations imposed by the official operating system of your device. It could make your device vulnerable to malware/viruses/malicious programs, compromise your device’s security features and it could mean that the Bourdon app won’t work properly or at all.
 
 ### **Price**
 
-Bourdon is free. There is no subscription, no one-time purchase and no in-app purchase of any kind. The app is distributed by Apple through the App Store, subject to the [Apple Media Services Terms and Conditions](https://www.apple.com/legal/internet-services/itunes/).
+Bourdon is sold as a single purchase. There is no subscription and no in-app purchase of any kind, and the whole app is included — no feature is held back behind a further payment. Purchases are processed by Apple through the App Store, subject to the [Apple Media Services Terms and Conditions](https://www.apple.com/legal/internet-services/itunes/), and refunds are handled by Apple in accordance with its policies.
 
 ### **Listening Safely**
 
@@ -25,7 +25,12 @@ The pitches Bourdon produces are intended for practice. They are generated on yo
 
 ### **Third Party Services**
 
-Bourdon uses no third-party services and makes no network connections. Distribution and updates are handled by Apple through the App Store, under the [Apple Media Services Terms and Conditions](https://www.apple.com/legal/internet-services/itunes/).
+Bourdon uses one third-party service: [Sentry](https://sentry.io/), which receives a report when the app crashes or hangs, and which you can switch off in Settings. Apart from that it makes no network connections. Distribution and updates are handled by Apple through the App Store.
+
+Link to Terms and Conditions of third party service providers used by the app:
+
+*   [Apple Media Services](https://www.apple.com/legal/internet-services/itunes/)
+*   [Sentry](https://sentry.io/terms/)
 
 You should be aware that there are certain things that [Tobiano Apps](https://www.tobianoapps.com/) will not take responsibility for. [Tobiano Apps](https://www.tobianoapps.com/) cannot always take responsibility for the way you use the app i.e. You need to make sure that your device stays charged – if it runs out of battery and you can’t turn it on to avail the Service, [Tobiano Apps](https://www.tobianoapps.com/) cannot accept responsibility.
 

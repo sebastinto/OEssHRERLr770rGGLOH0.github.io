@@ -5,7 +5,7 @@ description: Privacy Policy for the Bourdon app on iOS
 
 ## **Privacy Policy**
 
-[Tobiano Apps](https://www.tobianoapps.com/) built the Bourdon app for iOS. Bourdon is a free drone and practice-tone app, with no purchases of any kind. This Service is provided by [Tobiano Apps](https://www.tobianoapps.com/) and is intended for use as is.
+[Tobiano Apps](https://www.tobianoapps.com/) built the Bourdon app for iOS. Bourdon is a drone and practice-tone app, sold as a single purchase with no subscription and no in-app purchases. This Service is provided by [Tobiano Apps](https://www.tobianoapps.com/) and is intended for use as is.
 
 This page is used to inform visitors regarding policies with the collection, use, and disclosure of Personal Information if anyone decided to use this app.
 
@@ -15,11 +15,11 @@ The terms used in this Privacy Policy have the same meanings as in our Terms and
 
 Bourdon has no account, no sign-in and no server of its own. We do not collect, receive or store any personal information about you.
 
-Bourdon makes no network request at all. There is no networking code in the app, so there is no mechanism by which anything could reach us or anyone else. The only third party involved is Apple, who distribute it.
+Apart from the crash report described below, which you can switch off, Bourdon makes no network request at all. It has nothing to send: no library, no documents, no history of what you played.
 
 ### **What Stays on Your Device**
 
-Bourdon saves your preferences so the app opens the way you left it: your selected key, drone notes, chord voicings and saved pads, along with timbre, tempo and the volume levels for tone and click.
+Bourdon saves your preferences so the app opens the way you left it: your selected key, drone notes, chord voicings and starred favourites, along with timbre, tempo and the volume levels for tone and click.
 
 All of it is written to the standard iOS preferences storage on your own device. It is not synced to iCloud, it is not copied to any server, and deleting the app removes it.
 
@@ -33,7 +33,17 @@ Bourdon can keep playing while the app is in the background, and shows what is p
 
 ### **Analytics and Tracking**
 
-Bourdon contains no advertising, no attribution or measurement code, and no third-party tracking SDK. It does not track you across other apps or websites, and it does not build a profile of you. It includes no analytics, and no crash or stability reporting.
+Bourdon contains no advertising, no attribution or measurement code, and no third-party tracking SDK. It does not track you across other apps or websites, and it does not build a profile of you. It includes no analytics. It does use crash and stability reporting, which is described next.
+
+### **Crash and Stability Reporting**
+
+To find and fix the failures we would otherwise never hear about, Bourdon uses [Sentry](https://sentry.io/). When the app crashes or hangs, Sentry receives the error, the app version, and your device model and operating system version.
+
+It is deliberately narrower than Sentry's defaults. Bourdon sends no screenshot, no view hierarchy, no session replay, no performance traces, no personal information, and no identifier for you or your device. It records no automatic breadcrumbs — not even which controls you touched, which would amount to a record of a practice session and is not needed to fix a crash.
+
+Nothing about what you play reaches it: not a key, not a chord, not a saved favourite. This is the only monitoring in the app, and the only time Bourdon uses the network at all.
+
+You can turn it off. Settings has a Crash reporting switch under Diagnostics; switching it off stops the reporter immediately rather than at the next launch, and nothing further is sent.
 
 ### **Log Data**
 
@@ -41,11 +51,16 @@ We do not collect log data ourselves. However, in the case of an error in the ap
 
 ### **Service Providers**
 
-The only third party involved in Bourdon is Apple, who distribute the app. We share your information with no one, because we hold none of it. If we engage a service provider in future, it will be listed here.
+Two third parties are involved in Bourdon: Apple, who distribute the app, and Sentry, who receive a crash report when that is switched on. We share your information with no one else.
+
+Link to the privacy policy of third party service providers used by the app:
+
+*   [Apple — Privacy](https://www.apple.com/legal/privacy/)
+*   [Sentry](https://sentry.io/privacy/)
 
 ### **Security**
 
-We value your trust, and the strongest protection we can offer is not to hold your information at all. Your settings stay on your device, under the protection of iOS. Nothing about your use of Bourdon exists on our systems, so there is nothing there to lose.
+We value your trust, and the strongest protection we can offer is to hold as little as possible. Your settings stay on your device, under the protection of iOS. The only thing that ever leaves it is a crash report, sent over an encrypted connection, carrying the error and the device model and nothing about what you were playing.
 
 ### **Children’s Privacy**
 
@@ -53,7 +68,7 @@ These Services do not address anyone under the age of 13. We do not knowingly co
 
 ### **Changes to This Privacy Policy**
 
-We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. If a future version of Bourdon collects or transmits anything at all, this page will say so before that version is released.
+We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. If a future version of Bourdon collects or transmits anything beyond what is described here, this page will say so before that version is released.
 
 ### **Contact Us**
 
