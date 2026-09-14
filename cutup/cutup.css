@@ -56,8 +56,18 @@ a { color: inherit; }
 .nav { position: sticky; top: 0; z-index: 20; background: rgba(242,242,247,.86);
        backdrop-filter: blur(14px); border-bottom: 1px solid var(--hair); }
 .nav .wrap { display: flex; align-items: center; gap: 18px; height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; }
-.brand img { width: 28px; height: 28px; border-radius: 7px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; display: block; }
+.brand-text { display: flex; flex-direction: column; gap: 1px; line-height: 1.15; }
+.brand-text .name { font-weight: 700; font-size: 15px; color: inherit; text-decoration: none; }
+
+/* The icon carries two lines now, so it grows to the height of both. Who made this sits
+   under the app's name the way it does on a store listing — the footer has carried the
+   same link all along, but somebody who lands here from a shared URL reads the top of the
+   page and decides there. */
+.by { font-size: 11px; color: var(--ink3); text-decoration: none;
+  white-space: nowrap; }
+.by:hover { color: var(--ink2); }
 .nav-spacer { flex: 1; }
 .nav-links { display: flex; gap: 22px; }
 .nav-links a { text-decoration: none; color: var(--ink2); font-size: 15px; }
