@@ -1,17 +1,20 @@
 /* Bourdon — marketing page.
-   Palette lifted from the app's own tokens so the page and the product agree. */
+   Palette lifted from the app's default theme (Bumblebee, dark) so the page and the product agree. */
 
 :root {
-  --canvas:  #0b0c0d;
-  --surface: #14161a;
-  --raised:  #1e2126;
-  --control: #2a2e35;
-  --accent:  #f5a93f;
-  --on-accent: #17130b;
-  --ink:     #f2f0ec;
-  --ink2:    #a3a7ae;
-  --ink3:    #6e737c;
-  --hair:    rgba(255,255,255,.07);
+  /* Bumblebee, dark set — iosBourdon/bourdon-themes-handoff/themes.json. The yellow sits
+     at ~48°; don't warm it back towards the old amber. */
+  --canvas:  #16130d;
+  --surface: #1f1b13;
+  --raised:  #29241a;
+  --control: #353024;
+  --accent:  #f7cf2e;
+  --accent-rgb: 247,207,46;
+  --on-accent: #17130a;
+  --ink:     #f5f1e6;
+  --ink2:    #b3ab98;
+  --ink3:    #8c8574;
+  --hair:    rgba(255,240,200,.08);
   --wrap:    1180px;
   --sans: "Instrument Sans", ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -50,7 +53,7 @@ a { color: inherit; }
 
 .nav {
   position: sticky; top: 0; z-index: 20;
-  background: rgba(11,12,13,.82);
+  background: rgba(22,19,13,.82);
   backdrop-filter: saturate(140%) blur(14px);
   border-bottom: 1px solid var(--hair);
 }
@@ -77,18 +80,18 @@ a { color: inherit; }
   display: inline-flex; align-items: center; gap: 8px;
   font: 500 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase;
   color: var(--accent);
-  border: 1px solid rgba(245,169,63,.34);
+  border: 1px solid rgba(var(--accent-rgb),.34);
   border-radius: 999px; padding: 8px 13px;
 }
 .dot {
   width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(245,169,63,.5);
+  box-shadow: 0 0 0 0 rgba(var(--accent-rgb),.5);
   animation: pulse 2.6s ease-out infinite;
 }
 @keyframes pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(245,169,63,.45); }
-  70%  { box-shadow: 0 0 0 7px rgba(245,169,63,0); }
-  100% { box-shadow: 0 0 0 0 rgba(245,169,63,0); }
+  0%   { box-shadow: 0 0 0 0 rgba(var(--accent-rgb),.45); }
+  70%  { box-shadow: 0 0 0 7px rgba(var(--accent-rgb),0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb),0); }
 }
 @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
 
@@ -106,7 +109,7 @@ h1 {
   line-height: 1.02; letter-spacing: -.03em; font-weight: 600;
   margin: 0 0 22px; text-wrap: balance;
 }
-.amber { color: var(--accent); }
+.hl { color: var(--accent); }
 .lede { font-size: 19px; color: var(--ink2); margin: 0 0 30px; max-width: 34em; }
 .cta-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
 .cta {
@@ -126,7 +129,7 @@ h1 {
 .shot { border-radius: 14px; border: 1px solid var(--hair); }
 .hero-shot {
   border-radius: 16px; overflow: hidden;
-  border: 1px solid rgba(255,255,255,.09);
+  border: 1px solid rgba(255,240,200,.1);
   box-shadow: 0 40px 90px -30px rgba(0,0,0,.9);
 }
 
